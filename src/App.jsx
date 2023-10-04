@@ -1,9 +1,13 @@
 import "./App.scss";
-
+import DesktopIcons from "./components/DesktopIcons/DesktopIcons";
+import Desktop from "./components/Desktop/Desktop";
+import Taskbar from "./components/Taskbar/Taskbar";
 const App = () => {
   return (
     <>
-      <h1>Hello</h1>
+      <DesktopIcons />
+      <Desktop />
+      <Taskbar />
     </>
   );
 };
