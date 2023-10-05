@@ -1,3 +1,13 @@
-h1 {
-  color: red;
+@use "./assets/styles/_partials/resets";
+@use "./assets/styles/_partials/colours" as *;
+@use "./assets/styles/_partials/responsive" as *;
+@use "./assets/styles/_partials/mixins" as *;
+
+.main-container {
+  background-color: $background;
+}
+
+.desktop-container {
+  display: flex;
+  min-height: calc(100vh - 4rem);
 }

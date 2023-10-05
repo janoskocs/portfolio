@@ -1,7 +1,7 @@
 import "./Taskbar.scss";
 
 const Taskbar = () => {
-  return <aside className="taskbar">taskbar</aside>;
+  return <footer className="taskbar">taskbar</footer>;
 };
 
 export default Taskbar;

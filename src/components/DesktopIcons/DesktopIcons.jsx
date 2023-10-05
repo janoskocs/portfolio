@@ -5,4 +5,3 @@ const DesktopIcons = () => {
 };
 
 export default DesktopIcons;
-DesktopIcons;
