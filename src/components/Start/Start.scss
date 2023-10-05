@@ -1,0 +1,8 @@
+.start {
+  position: absolute;
+  bottom: 4rem;
+  border: 1px solid black;
+  &--hidden {
+    display: none;
+  }
+}

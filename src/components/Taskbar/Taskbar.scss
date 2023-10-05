@@ -1,4 +1,12 @@
+@use "../../assets/styles/_partials/resets";
+@use "../../assets/styles/_partials/colours" as *;
+@use "../../assets/styles/_partials/responsive" as *;
+@use "../../assets/styles/_partials/mixins" as *;
+
 .taskbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $base;
   height: 4rem;
   border: 1px solid black;
 }
