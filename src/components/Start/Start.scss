@@ -1,11 +1,35 @@
 @use "../../assets/styles/_partials/gui" as *;
+@use "../../assets/styles/_partials/colours" as *;
 
 .start {
   position: absolute;
   bottom: 4rem;
   border: 1px solid black;
+  display: flex;
   @include gui_base;
+
+  &__title-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background: linear-gradient(360deg, #0000ff, #000080);
+    width: 5rem;
+  }
+
+  &__image {
+    width: 5rem;
+    padding: 0.5rem;
+  }
+  &__title {
+    rotate: 180deg;
+    writing-mode: vertical-lr;
+    color: $light;
+  }
   &--hidden {
     display: none;
+  }
+
+  &__list-item {
+    padding: 2rem;
   }
 }
