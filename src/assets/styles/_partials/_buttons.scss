@@ -1,0 +1,17 @@
+@use "./colours" as *;
+
+@mixin button {
+  all: unset;
+  box-shadow: inset -1px -1px $button-shadow-dark,
+    inset 1px 1px $button-shadow-light, inset -2px -2px $button-shadow-mid,
+    inset 2px 2px $button-shadow-mid-light;
+  text-shadow: 0 0 $text-shadow-dark;
+
+  &:active {
+    box-shadow: inset -1px -1px $button-shadow-light,
+      inset 1px 1px $button-shadow-dark,
+      inset -2px -2px $button-shadow-mid-light,
+      inset 2px 2px $button-shadow-mid-light;
+    text-shadow: 1px 1px $text-shadow-dark;
+  }
+}

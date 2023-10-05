@@ -1,7 +1,10 @@
+@use "../../assets/styles/_partials/gui" as *;
+
 .start {
   position: absolute;
   bottom: 4rem;
   border: 1px solid black;
+  @include gui_base;
   &--hidden {
     display: none;
   }

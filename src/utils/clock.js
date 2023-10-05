@@ -3,5 +3,7 @@ export const calcTime = () => {
   let hour = dateNow.getHours();
   let minutes = dateNow.getMinutes();
 
-  return `${hour}:${minutes}`;
+  let formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+
+  return `${hour}:${formattedMinutes}`;
 };

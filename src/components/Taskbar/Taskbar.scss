@@ -2,11 +2,16 @@
 @use "../../assets/styles/_partials/colours" as *;
 @use "../../assets/styles/_partials/responsive" as *;
 @use "../../assets/styles/_partials/mixins" as *;
+@use "../../assets/styles/_partials/gui" as *;
+@use "../../assets/styles/_partials/buttons" as *;
 
 .taskbar {
   display: flex;
   justify-content: space-between;
-  background-color: $base;
   height: 4rem;
-  border: 1px solid black;
+  @include gui_base;
+
+  &__start {
+    @include button;
+  }
 }
