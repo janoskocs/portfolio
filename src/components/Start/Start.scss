@@ -16,7 +16,7 @@
     width: 5rem;
   }
 
-  &__image {
+  &__logo {
     width: 5rem;
     padding: 0.5rem;
   }
@@ -29,7 +29,32 @@
     display: none;
   }
 
+  &__list {
+    margin: 0.25rem;
+    padding: 0;
+    list-style-type: none;
+  }
+
   &__list-item {
-    padding: 2rem;
+    margin: 0 0.25rem;
+  }
+
+  &__menu-icon {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+
+  &__button {
+    all: unset;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:hover {
+      background-color: $accent-color;
+      color: $light;
+    }
   }
 }
