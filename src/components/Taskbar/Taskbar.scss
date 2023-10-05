@@ -8,10 +8,19 @@
 .taskbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 4rem;
   @include gui_base;
 
   &__start {
     @include button;
+  }
+
+  &__time {
+  }
+  &__clock {
+    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
   }
 }
