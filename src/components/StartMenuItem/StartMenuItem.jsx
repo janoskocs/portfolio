@@ -1,10 +1,23 @@
 import "./StartMenuItem.scss";
 
-const StartMenuItem = ({ name, alt, icon, action, type, address }) => {
+const StartMenuItem = ({
+  name,
+  alt,
+  icon,
+  action,
+  type,
+  address,
+  setActiveWindow,
+}) => {
   if (type === "menu") {
     return (
       <li className="start__list-item">
-        <button className="start__button">
+        <button
+          className="start__button"
+          onClick={() => {
+            setActiveWindow(action);
+          }}
+        >
           <img src={icon} alt={alt} className="start__menu-icon" />
           {name}
         </button>
