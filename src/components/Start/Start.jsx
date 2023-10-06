@@ -1,5 +1,5 @@
 import "./Start.scss";
-import logo from "../../../public/images/skills/logo.png";
+import logo from "/images/skills/logo.png";
 
 const Start = ({ showStartMenu }) => {
   return (

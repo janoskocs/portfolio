@@ -4,7 +4,7 @@
 .start {
   position: absolute;
   bottom: 4rem;
-  border: 1px solid black;
+  left: 1px;
   display: flex;
   @include gui_base;
 
@@ -14,6 +14,7 @@
     align-items: center;
     background: linear-gradient(360deg, #0000ff, #000080);
     width: 5rem;
+    margin: 1px;
   }
 
   &__logo {
