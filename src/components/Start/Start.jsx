@@ -4,7 +4,6 @@ import logo from "/images/skills/logo.png";
 import { menuItems } from "src/data/menuItems";
 
 const Start = ({ showStartMenu }) => {
-  console.log(menuItems);
   return (
     <nav className={showStartMenu ? "start" : "start start--hidden"}>
       <section className="start__title-wrapper">
@@ -23,42 +22,6 @@ const Start = ({ showStartMenu }) => {
             address={item.address}
           />
         ))}
-        {/* <li className="start__list-item">
-          <button className="start__button">
-            <img src={logo} alt="About me" className="start__menu-icon" />
-            Placeholder
-          </button>
-        </li>
-        <li className="start__list-item">
-          <button className="start__button">
-            <img src={logo} alt="GitHub" className="start__menu-icon" />
-            GitHub Page
-          </button>
-        </li>
-        <li className="start__list-item">
-          <button className="start__button">
-            <img src={logo} alt="LinkedIn" className="start__menu-icon" />
-            LinkedIn Profile
-          </button>
-        </li>
-        <li className="start__list-item">
-          <button className="start__button">
-            <img src={logo} alt="My projects" className="start__menu-icon" />
-            My Projects
-          </button>
-        </li>
-        <li className="start__list-item">
-          <button className="start__button">
-            <img src={logo} alt="Contact me" className="start__menu-icon" />
-            Contact Me
-          </button>
-        </li>
-        <li className="start__list-item">
-          <button className="start__button">
-            <img src={logo} alt="About me" className="start__menu-icon" />
-            About Me
-          </button>
-        </li> */}
       </ul>
     </nav>
   );
