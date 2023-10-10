@@ -1,4 +1,4 @@
-import AboutMeWindow from "../AboutMeWindow";
+import DesktopWindow from "../DesktopWindow";
 import "./Desktop.scss";
 
 const Desktop = ({ activeWindow }) => {
@@ -7,13 +7,13 @@ const Desktop = ({ activeWindow }) => {
       {(() => {
         switch (activeWindow) {
           case "about-me":
-            return <AboutMeWindow />;
+            return <DesktopWindow type={"about-me"} />;
           case "contact-me":
-            return <h1>contact me</h1>;
+            return <DesktopWindow type={"contact-me"} />;
           case "projects":
-            return <h1>projects</h1>;
+            return <DesktopWindow type={"projects"} />;
           default:
-            return <AboutMeWindow />;
+            return <DesktopWindow type={"about-me"} />;
         }
       })()}
     </main>

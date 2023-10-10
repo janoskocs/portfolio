@@ -7,7 +7,7 @@ import { useState } from "react";
 const App = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
   // const [windows, setWindows] = useState([]);
-  const [activeWindow, setActiveWindow] = useState("about-me");
+  const [activeWindow, setActiveWindow] = useState("contact-me");
 
   console.log(activeWindow);
   return (
