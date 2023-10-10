@@ -22,7 +22,7 @@ export const menuItems = [
     name: "My projects",
     alt: "My projects",
     icon: "/images/icons/diropen.png",
-    action: "my-projects",
+    action: "projects",
     type: "menu",
     address: "no-address",
   },

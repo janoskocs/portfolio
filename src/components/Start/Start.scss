@@ -7,14 +7,13 @@
   bottom: 4rem;
   left: 1px;
   @include flex();
-
   @include gui_base;
 
   &__title-wrapper {
     @include flex(column-reverse, center, center);
     background: linear-gradient(360deg, #0000ff, #000080);
     width: 5rem;
-    margin: 1px;
+    margin: 2px;
   }
 
   &__logo {
