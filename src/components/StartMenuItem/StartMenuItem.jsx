@@ -8,6 +8,7 @@ const StartMenuItem = ({
   type,
   address,
   setActiveWindow,
+  setShowStartMenu,
 }) => {
   if (type === "menu") {
     return (
@@ -15,6 +16,7 @@ const StartMenuItem = ({
         <button
           className="start__button"
           onClick={() => {
+            setShowStartMenu(false);
             setActiveWindow(action);
           }}
         >

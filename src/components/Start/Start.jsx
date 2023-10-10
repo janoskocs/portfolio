@@ -3,7 +3,7 @@ import "./Start.scss";
 import logo from "/images/skills/logo.png";
 import { menuItems } from "src/data/menuItems";
 
-const Start = ({ showStartMenu, setActiveWindow }) => {
+const Start = ({ showStartMenu, setShowStartMenu, setActiveWindow }) => {
   return (
     <nav className={showStartMenu ? "start" : "start start--hidden"}>
       <section className="start__title-wrapper">
@@ -21,6 +21,7 @@ const Start = ({ showStartMenu, setActiveWindow }) => {
             type={item.type}
             address={item.address}
             setActiveWindow={setActiveWindow}
+            setShowStartMenu={setShowStartMenu}
           />
         ))}
       </ul>

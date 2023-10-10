@@ -16,7 +16,11 @@ const App = () => {
         <DesktopIcons />
         <Desktop activeWindow={activeWindow} />
       </div>
-      <Start showStartMenu={showStartMenu} setActiveWindow={setActiveWindow} />
+      <Start
+        showStartMenu={showStartMenu}
+        setShowStartMenu={setShowStartMenu}
+        setActiveWindow={setActiveWindow}
+      />
       <Taskbar setShowStartMenu={setShowStartMenu} />
     </div>
   );

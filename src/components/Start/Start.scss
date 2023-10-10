@@ -8,12 +8,17 @@
   left: 1px;
   @include flex();
   @include gui_base;
+  border-bottom: 1px solid $dark;
+  border-right: 1px solid $dark;
+  border-left: 1px solid $light;
+  border-top: 1px solid $light;
+  box-shadow: inset 1px 1px $base-dark;
 
   &__title-wrapper {
     @include flex(column-reverse, center, center);
     background: linear-gradient(360deg, #0000ff, #000080);
     width: 5rem;
-    margin: 2px;
+    margin-bottom: 1px;
   }
 
   &__logo {
@@ -30,13 +35,12 @@
   }
 
   &__list {
-    margin: 0.25rem;
     padding: 0;
     list-style-type: none;
   }
 
   &__list-item {
-    margin: 0 0.25rem;
+    margin: 0.1rem;
   }
 
   &__menu-icon {
