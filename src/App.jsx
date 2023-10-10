@@ -6,7 +6,7 @@ import Start from "./components/Start";
 import { useState } from "react";
 const App = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
-  const [windows, setWindows] = useState([]);
+  // const [windows, setWindows] = useState([]);
   const [activeWindow, setActiveWindow] = useState("");
 
   console.log(activeWindow);

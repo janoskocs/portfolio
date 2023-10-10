@@ -1,9 +1,9 @@
-@use "../../assets/styles/_partials/resets";
-@use "../../assets/styles/_partials/colours" as *;
-@use "../../assets/styles/_partials/responsive" as *;
-@use "../../assets/styles/_partials/mixins" as *;
-@use "../../assets/styles/_partials/gui" as *;
-@use "../../assets/styles/_partials/buttons" as *;
+@use "../../styles/_partials/resets";
+@use "../../styles/_partials/colours" as *;
+@use "../../styles/_partials/responsive" as *;
+@use "../../styles/_partials/mixins" as *;
+@use "../../styles/_partials/gui" as *;
+@use "../../styles/_partials/buttons" as *;
 
 .taskbar {
   display: flex;
