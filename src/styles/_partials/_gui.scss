@@ -6,3 +6,8 @@
   border-top: 1px solid $base-light;
   border-bottom: 1px solid $base-dark;
 }
+
+@mixin gui_box_inset {
+  box-shadow: inset -1px -1px $button-shadow-mid-light,
+    inset 1px 1px $button-shadow-mid;
+}

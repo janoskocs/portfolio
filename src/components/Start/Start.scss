@@ -1,17 +1,17 @@
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/colours" as *;
+@use "../../styles/_partials/mixins" as *;
 
 .start {
   position: absolute;
   bottom: 4rem;
   left: 1px;
-  display: flex;
+  @include flex();
+
   @include gui_base;
 
   &__title-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+    @include flex(column-reverse, center, center);
     background: linear-gradient(360deg, #0000ff, #000080);
     width: 5rem;
     margin: 1px;
@@ -49,9 +49,7 @@
     all: unset;
     width: 100%;
     cursor: pointer;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex(null, null, center);
 
     &:hover {
       background-color: $accent-color;

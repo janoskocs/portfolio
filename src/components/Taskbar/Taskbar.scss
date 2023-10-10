@@ -6,9 +6,7 @@
 @use "../../styles/_partials/buttons" as *;
 
 .taskbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex(null, space-between, center);
   height: 4rem;
   @include gui_base;
 
@@ -19,7 +17,7 @@
   &__time {
   }
   &__clock {
-    box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px grey;
+    @include gui_box_inset;
     margin: 0 0.5rem;
     padding: 0.5rem;
   }
