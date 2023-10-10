@@ -8,7 +8,20 @@
   @include gui_base();
   @include gui_window_base;
 
-  &__title {
+  &__title-bar {
     @include gui_window_title;
+  }
+
+  &__title-img-wrapper {
+    @include flex(null, null, center);
+  }
+  &__title {
+    font-size: 1.75rem;
+    margin: 0;
+    margin-left: 0.5rem;
+  }
+
+  &__icon {
+    width: 1.75rem;
   }
 }
