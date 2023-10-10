@@ -7,14 +7,14 @@ import { useState } from "react";
 const App = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
   // const [windows, setWindows] = useState([]);
-  const [activeWindow, setActiveWindow] = useState("");
+  const [activeWindow, setActiveWindow] = useState("about-me");
 
   console.log(activeWindow);
   return (
     <div className="main-container">
       <div className="desktop-container">
         <DesktopIcons />
-        <Desktop />
+        <Desktop activeWindow={activeWindow} />
       </div>
       <Start showStartMenu={showStartMenu} setActiveWindow={setActiveWindow} />
       <Taskbar setShowStartMenu={setShowStartMenu} />
