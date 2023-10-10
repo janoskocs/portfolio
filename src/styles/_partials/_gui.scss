@@ -1,4 +1,5 @@
 @use "./colours" as *;
+@use "./mixins" as *;
 
 @mixin gui_base {
   box-shadow: inset 1px 0 $light;
@@ -10,4 +11,18 @@
 @mixin gui_box_inset {
   box-shadow: inset -1px -1px $button-shadow-mid-light,
     inset 1px 1px $button-shadow-mid;
+}
+
+@mixin gui_window_base {
+  width: 70vw;
+  height: 70vh;
+  margin: 5rem auto;
+  padding: 1px;
+}
+
+@mixin gui_window_title {
+  @include flex(null, space-between, center);
+  background: linear-gradient(90deg, $accent-color, $accent-color-light);
+  padding: 3px 2px 3px 3px;
+  color: $light;
 }
