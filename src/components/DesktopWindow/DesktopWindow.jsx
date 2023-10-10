@@ -12,6 +12,7 @@ const DesktopWindow = ({ type }) => {
           />
           <h2 className="window__title">{type}</h2>
         </div>
+        <button className="window__button-close">X</button>
       </div>
       <div className="window__body">body</div>
     </div>
