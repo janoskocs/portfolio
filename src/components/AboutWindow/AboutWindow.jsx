@@ -1,6 +1,16 @@
 import "./AboutWindow.scss";
+import { skills } from "src/data/skills";
 
 const AboutWindow = () => {
+  const skillsJSX = skills.map((skill) => {
+    return (
+      <div key={skill.id} className="about__skill">
+        <img src={skill.image} alt={skill.alt} />
+        <p className="about__skill-title">{skill.name}</p>
+      </div>
+    );
+  });
+
   return (
     <div className="window">
       <div className="window__title-bar">
@@ -38,7 +48,7 @@ const AboutWindow = () => {
             <p className="about__text">
               I make these components work together:
             </p>
-            <div className="about__skills"></div>
+            <div className="about__skills">{skillsJSX}</div>
           </div>
         </section>
       </div>
