@@ -3,7 +3,7 @@
 
 .nav-icons {
   display: none;
-  border: 1px solid black;
+
   @include tablet {
     display: block;
   }

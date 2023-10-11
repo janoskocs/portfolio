@@ -8,7 +8,9 @@
 .taskbar {
   @include flex(null, space-between, center);
   height: 4rem;
-  @include gui_base;
+  background-color: $base;
+  border-top: 1px solid $base-light;
+  border-bottom: 1px solid $base-dark;
 
   &__start {
     @include button;
