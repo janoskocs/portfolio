@@ -31,4 +31,42 @@
     padding: 0.1rem 0.375rem;
     color: $dark;
   }
+
+  &__control-btns {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+
+  @include flex(null, center, center);
+  &__image {
+    width: 35%;
+  }
+
+  &__title {
+    margin: 1rem 0;
+  }
+  &__text {
+    margin: 1rem 0;
+  }
+
+  &__skills {
+    @include flex(null, baseline, null, wrap);
+  }
+  &__skill {
+    width: 9rem;
+    text-align: center;
+  }
+  &__skill-icon {
+    width: 4rem;
+  }
+
+  &__skill-title {
+    text-align: center;
+    margin: 0.5rem;
+  }
 }

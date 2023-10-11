@@ -43,14 +43,8 @@ export const skills = [
   },
   {
     id: "s8",
-    name: "MySQL",
+    name: "MongoDB",
     alt: "MongoDB database",
     image: "public/images/skills/mongodb.png",
-  },
-  {
-    id: "s9",
-    name: "Git",
-    alt: "Git version control",
-    image: "public/images/skills/git.png",
   },
 ];

@@ -5,7 +5,7 @@ const AboutWindow = () => {
   const skillsJSX = skills.map((skill) => {
     return (
       <div key={skill.id} className="about__skill">
-        <img src={skill.image} alt={skill.alt} />
+        <img src={skill.image} alt={skill.alt} className="about__skill-icon" />
         <p className="about__skill-title">{skill.name}</p>
       </div>
     );
@@ -29,7 +29,7 @@ const AboutWindow = () => {
           <img
             src={`public/images/icons/janoskocs_mycomputer1.png`}
             alt="Janos Kocs on a computer screen"
-            className="about__img"
+            className="about__image"
           />
           <div className="about__side">
             <h3 className="about__title">
@@ -51,6 +51,12 @@ const AboutWindow = () => {
             <div className="about__skills">{skillsJSX}</div>
           </div>
         </section>
+
+        <div className="window__control-btns">
+          <hr />
+          <button className="window__cta-btn">Contact me</button>
+          <button className="window__close-btn">Close</button>
+        </div>
       </div>
     </div>
   );

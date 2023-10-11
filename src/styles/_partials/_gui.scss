@@ -1,5 +1,6 @@
 @use "./colours" as *;
 @use "./mixins" as *;
+@use "./responsive" as *;
 
 @mixin gui_base {
   box-shadow: inset 1px 0 $light;
@@ -17,9 +18,10 @@
 }
 
 @mixin gui_window_base {
-  width: 70vw;
-  height: 70vh;
-  margin: 5rem auto;
+  width: 80vw;
+  max-width: $max-content;
+  height: 85vh;
+  margin: 2rem auto 0;
   padding: 1px;
 }
 
