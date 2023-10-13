@@ -1,3 +1,4 @@
+import HorizontalLine from "../HorizontalLine";
 import "./AboutWindow.scss";
 import { skills } from "src/data/skills";
 
@@ -35,7 +36,7 @@ const AboutWindow = () => {
             <h3 className="about__title">
               János Kócs | Software Engineer v3.0
             </h3>
-            <hr />
+            <HorizontalLine />
             <p className="about__text">
               Hey there, I&apos;m János, I just completed a tech bootcamp and
               now I&apos;m making the web more interactive. When I was a kid, my
@@ -43,7 +44,8 @@ const AboutWindow = () => {
               That&apos;s where I got the inspiration for my epic portfolio
               website.
             </p>
-            <hr />
+            <HorizontalLine />
+
             <p className="about__text">
               I make these components work together:
             </p>
@@ -51,7 +53,8 @@ const AboutWindow = () => {
           </div>
         </section>
         <div className="window__control-btns">
-          <hr />
+          <HorizontalLine />
+
           <button className="window__cta-btn">What I do</button>
           <button className="window__close-btn">Close</button>
         </div>
