@@ -4,6 +4,7 @@
 @use "../../styles/_partials/mixins" as *;
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/buttons" as *;
+@use "../../styles/_partials/variables" as *;
 
 .taskbar {
   @include flex(null, space-between, center);
@@ -14,13 +15,21 @@
 
   &__start {
     @include button;
+    @include flex();
+    margin-left: $tiny * 2;
+    padding: $small-half;
+  }
+
+  &__start-icon {
+    width: 2rem;
+    margin-right: $small-half;
   }
 
   &__time {
   }
   &__clock {
     @include gui_box_inset;
-    margin: 0 0.5rem;
-    padding: 0.5rem;
+    margin: 0 $small;
+    padding: $small;
   }
 }
