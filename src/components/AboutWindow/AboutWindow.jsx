@@ -44,17 +44,15 @@ const AboutWindow = () => {
               website.
             </p>
             <hr />
-            <p className="about__text">I am based in London, UK.</p>
             <p className="about__text">
               I make these components work together:
             </p>
             <div className="about__skills">{skillsJSX}</div>
           </div>
         </section>
-
         <div className="window__control-btns">
           <hr />
-          <button className="window__cta-btn">Contact me</button>
+          <button className="window__cta-btn">What I do</button>
           <button className="window__close-btn">Close</button>
         </div>
       </div>

@@ -47,4 +47,10 @@ export const skills = [
     alt: "MongoDB database",
     image: "/images/skills/mongodb.png",
   },
+  {
+    id: "s9",
+    name: "Git",
+    alt: "Git version control",
+    image: "/images/skills/git.png",
+  },
 ];

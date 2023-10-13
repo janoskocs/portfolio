@@ -33,22 +33,27 @@
   }
 
   &__control-btns {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
   }
 }
 
 .about {
-  width: 80%;
-  margin: 0 auto;
-
-  @include flex(null, center, center);
+  width: 95%;
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.5rem;
+  @include tablet {
+    width: 80%;
+    font-size: 2rem;
+    @include flex(null, center, center);
+  }
   &__image {
     width: 35%;
   }
 
   &__title {
-    margin: 1rem 0;
+    margin: 0;
   }
   &__text {
     margin: 1rem 0;
