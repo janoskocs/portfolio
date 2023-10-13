@@ -1,4 +1,5 @@
 @use "./colours" as *;
+@use "./variables" as *;
 
 @mixin button {
   all: unset;
@@ -14,5 +15,9 @@
       inset -2px -2px $button-shadow-mid-light,
       inset 2px 2px $button-shadow-mid-light;
     text-shadow: 1px 1px $text-shadow-dark;
+  }
+  &:focus {
+    outline: 1px dotted $dark;
+    outline-offset: -4px;
   }
 }

@@ -54,8 +54,9 @@ const AboutWindow = () => {
         </section>
         <div className="window__control-btns">
           <HorizontalLine />
-
-          <button className="window__cta-btn">What I do</button>
+          <button className="window__cta-btn" autoFocus="true">
+            What I do
+          </button>
           <button className="window__close-btn">Close</button>
         </div>
       </div>

@@ -17,6 +17,7 @@
   &__title-img-wrapper {
     @include flex(null, null, center);
   }
+
   &__title {
     font-size: $medium-half;
     margin: 0;
@@ -26,6 +27,7 @@
   &__icon {
     width: $medium-half;
   }
+
   &__button-close {
     @include gui_base;
     @include button;
@@ -37,18 +39,30 @@
     width: 95%;
     margin: 0 auto;
   }
+
+  &__cta-btn {
+    @include button;
+    padding: $small-half $small;
+    margin-right: $small-half;
+  }
+
+  &__close-btn {
+    @extend .window__cta-btn;
+  }
 }
 
 .about {
   width: 95%;
-  margin: $small auto;
+  margin: $small auto 0;
   text-align: center;
   font-size: $medium-half;
+
   @include tablet {
     width: 80%;
     font-size: $medium;
     @include flex(null, center, center);
   }
+
   &__image {
     width: 35%;
   }
@@ -56,17 +70,20 @@
   &__title {
     margin: 0;
   }
+
   &__text {
     margin: $small 0;
   }
 
   &__skills {
-    @include flex(null, baseline, null, wrap);
+    @include flex(null, center, null, wrap);
   }
+
   &__skill {
     width: 9rem;
     text-align: center;
   }
+
   &__skill-icon {
     width: 4rem;
   }

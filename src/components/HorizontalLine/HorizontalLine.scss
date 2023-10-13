@@ -1,3 +1,5 @@
+@use "../../styles/_partials/variables" as *;
+
 .horizontal-line {
-  margin: 0.5rem;
+  margin: $small-half 0;
 }
