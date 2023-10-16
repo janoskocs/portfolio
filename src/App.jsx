@@ -35,7 +35,7 @@ const App = () => {
       <Start
         showStartMenu={showStartMenu}
         setShowStartMenu={setShowStartMenu}
-        setActiveWindow={setActiveWindow}
+        handleOpenWindow={handleOpenWindow}
       />
       <Taskbar
         setShowStartMenu={setShowStartMenu}

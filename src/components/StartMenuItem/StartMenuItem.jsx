@@ -7,7 +7,7 @@ const StartMenuItem = ({
   action,
   type,
   address,
-  setActiveWindow,
+  handleOpenWindow,
   setShowStartMenu,
 }) => {
   if (type === "menu") {
@@ -17,7 +17,7 @@ const StartMenuItem = ({
           className="start__button"
           onClick={() => {
             setShowStartMenu(false);
-            setActiveWindow(action);
+            handleOpenWindow(action);
           }}
         >
           <img src={icon} alt={alt} className="start__menu-icon" />
