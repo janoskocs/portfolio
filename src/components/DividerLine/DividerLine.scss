@@ -1,0 +1,10 @@
+@use "../../styles/_partials/variables" as *;
+
+.horizontal-line {
+  margin: $small-half 0;
+}
+
+.vertical-line {
+  height: 80%;
+  margin: $small-half $small-half;
+}

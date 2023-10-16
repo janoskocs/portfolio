@@ -7,7 +7,7 @@
 @use "../../styles/_partials/variables" as *;
 
 .taskbar {
-  @include flex(null, space-between, center);
+  @include flex(null, flex-start, center);
   height: 4rem;
   background-color: $base;
   border-top: 1px solid $base-light;
@@ -26,9 +26,11 @@
   }
 
   &__time {
+    margin-left: auto;
   }
   &__clock {
     @include gui_box_inset;
+    margin: 0;
     margin-right: $tiny * 3;
     padding: $small-half + $tiny;
   }
