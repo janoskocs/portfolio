@@ -29,7 +29,7 @@
   }
   &__clock {
     @include gui_box_inset;
-    margin: 0 $tiny * 2;
-    padding: $small;
+    margin-right: $tiny * 3;
+    padding: $small-half + $tiny;
   }
 }
