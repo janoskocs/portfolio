@@ -9,14 +9,27 @@ const App = () => {
   const [windows, setWindows] = useState(["about-me"]);
   const [activeWindow, setActiveWindow] = useState("about-me");
 
-  console.log(activeWindow);
+  const handleOpenWindow = (windowToOpen) => {
+    if (!windows.includes(windowToOpen)) {
+      setWindows([...windows, windowToOpen]);
+    }
+    setActiveWindow(windowToOpen);
+  };
+
+  const handleCloseWindow = (windowToClose) => {
+    setWindows((prevWindows) =>
+      prevWindows.filter((window) => window !== windowToClose)
+    );
+    setActiveWindow("");
+  };
   return (
     <div className="main-container">
       <div className="desktop-container">
         <DesktopIcons />
         <Desktop
           activeWindow={activeWindow}
-          setActiveWindow={setActiveWindow}
+          handleOpenWindow={handleOpenWindow}
+          handleCloseWindow={handleCloseWindow}
         />
       </div>
       <Start
