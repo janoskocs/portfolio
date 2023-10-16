@@ -22,9 +22,23 @@ const Taskbar = ({
 
   const taskbar = windows.map((window) => {
     if (activeWindow === window) {
-      return <Task key={window} active={true} window={window} />;
+      return (
+        <Task
+          key={window}
+          active={true}
+          window={window}
+          setActiveWindow={setActiveWindow}
+        />
+      );
     } else {
-      return <Task key={window} active={false} window={window} />;
+      return (
+        <Task
+          key={window}
+          active={false}
+          window={window}
+          setActiveWindow={setActiveWindow}
+        />
+      );
     }
   });
 
