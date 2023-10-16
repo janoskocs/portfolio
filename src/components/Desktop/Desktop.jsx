@@ -2,13 +2,13 @@ import AboutWindow from "../AboutWindow";
 import DesktopWindow from "../DesktopWindow";
 import "./Desktop.scss";
 
-const Desktop = ({ activeWindow }) => {
+const Desktop = ({ activeWindow, setActiveWindow }) => {
   return (
     <main className="desktop">
       {(() => {
         switch (activeWindow) {
           case "about-me":
-            return <AboutWindow />;
+            return <AboutWindow setActiveWindow={setActiveWindow} />;
           case "contact-me":
             return <DesktopWindow type={"contact-me"} />;
           case "projects":

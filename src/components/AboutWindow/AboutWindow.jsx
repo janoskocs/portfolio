@@ -2,7 +2,7 @@ import DividerLine from "../DividerLine";
 import "./AboutWindow.scss";
 import { skills } from "src/data/skills";
 
-const AboutWindow = () => {
+const AboutWindow = ({ setActiveWindow }) => {
   const skillsJSX = skills.map((skill) => {
     return (
       <div key={skill.id} className="about__skill">
@@ -54,10 +54,19 @@ const AboutWindow = () => {
         </section>
         <div className="window__control-btns">
           <DividerLine orientation="horizontal" />
-          <button className="window__cta-btn" autoFocus={true}>
+          <button
+            className="window__cta-btn"
+            autoFocus={true}
+            onClick={() => setActiveWindow("projects")}
+          >
             What I do
           </button>
-          <button className="window__close-btn">Close</button>
+          <button
+            className="window__close-btn"
+            onClick={() => setActiveWindow("")}
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
