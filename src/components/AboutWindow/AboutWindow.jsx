@@ -1,4 +1,4 @@
-import HorizontalLine from "../HorizontalLine";
+import DividerLine from "../DividerLine";
 import "./AboutWindow.scss";
 import { skills } from "src/data/skills";
 
@@ -36,7 +36,7 @@ const AboutWindow = () => {
             <h3 className="about__title">
               János Kócs | Software Engineer v3.0
             </h3>
-            <HorizontalLine />
+            <DividerLine orientation="horizontal" />
             <p className="about__text">
               Hey there, I&apos;m János, I just completed a tech bootcamp and
               now I&apos;m making the web more interactive. When I was a kid, my
@@ -44,7 +44,7 @@ const AboutWindow = () => {
               That&apos;s where I got the inspiration for my epic portfolio
               website.
             </p>
-            <HorizontalLine />
+            <DividerLine orientation="horizontal" />
 
             <p className="about__text">
               I make these components work together:
@@ -53,7 +53,7 @@ const AboutWindow = () => {
           </div>
         </section>
         <div className="window__control-btns">
-          <HorizontalLine />
+          <DividerLine orientation="horizontal" />
           <button className="window__cta-btn" autoFocus="true">
             What I do
           </button>
