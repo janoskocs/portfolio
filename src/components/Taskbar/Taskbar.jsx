@@ -2,7 +2,6 @@ import { calcTime } from "src/utils/clock";
 import "./Taskbar.scss";
 import startLogo from "/images/logos/logocolour.png";
 import { useState } from "react";
-import HorizontalLine from "../HorizontalLine";
 
 const Taskbar = ({ setShowStartMenu }) => {
   const [time, setTime] = useState(calcTime());
