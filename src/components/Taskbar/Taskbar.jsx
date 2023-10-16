@@ -28,6 +28,7 @@ const Taskbar = ({
           active={true}
           window={window}
           setActiveWindow={setActiveWindow}
+          shrink={windows.length > 2 ? "task--shrink" : ""}
         />
       );
     } else {
@@ -37,6 +38,7 @@ const Taskbar = ({
           active={false}
           window={window}
           setActiveWindow={setActiveWindow}
+          shrink={windows.length > 2 ? "task--shrink" : ""}
         />
       );
     }

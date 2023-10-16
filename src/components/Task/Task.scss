@@ -9,6 +9,15 @@
   @include flex(null, space-around, center);
   margin-right: $tiny * 2;
 
+  &--shrink {
+    @include mobile {
+      width: $medium * 2;
+    }
+    @include tablet {
+      width: auto;
+    }
+  }
+
   &--active {
     @include button__taskbar--active;
   }
@@ -21,5 +30,8 @@
     margin: 0;
     font-size: $small + $tiny * 3;
     padding: $small-half;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
