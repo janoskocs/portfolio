@@ -2,9 +2,15 @@ import { calcTime } from "src/utils/clock";
 import "./Taskbar.scss";
 import startLogo from "/images/logos/logocolour.png";
 import DividerLine from "../DividerLine";
+import Task from "../Task";
 import { useState } from "react";
 
-const Taskbar = ({ setShowStartMenu }) => {
+const Taskbar = ({
+  setShowStartMenu,
+  windows,
+  activeWindow,
+  setActiveWindow,
+}) => {
   const [time, setTime] = useState(calcTime());
 
   setInterval(() => {
@@ -21,7 +27,10 @@ const Taskbar = ({ setShowStartMenu }) => {
         Start
       </button>
       <DividerLine orientation="vertical" />
-      <section className="taskbar__tasks"></section>
+      <section className="taskbar__tasks">
+        <Task activeWindow={activeWindow} />
+        <Task activeWindow={activeWindow} />
+      </section>
       <section className="taskbar__time">
         <p className="taskbar__clock">{time}</p>
       </section>

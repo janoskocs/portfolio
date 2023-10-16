@@ -1,0 +1,22 @@
+@use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/colours" as *;
+@use "../../styles/_partials/responsive" as *;
+@use "../../styles/_partials/mixins" as *;
+@use "../../styles/_partials/buttons" as *;
+
+.task {
+  @include button;
+  @include flex(null, space-around, center);
+  margin-right: $tiny * 2;
+
+  &__icon {
+    width: $medium-half;
+    margin-left: $small-half;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: $medium-half;
+    padding: $small-half;
+  }
+}

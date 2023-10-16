@@ -25,9 +25,14 @@
     margin-right: $small-half;
   }
 
+  &__tasks {
+    @include flex();
+  }
+
   &__time {
     margin-left: auto;
   }
+
   &__clock {
     @include gui_box_inset;
     margin: 0;
