@@ -9,6 +9,9 @@
   @include flex(null, space-around, center);
   margin-right: $tiny * 2;
 
+  &--active {
+    @include button__taskbar--active;
+  }
   &__icon {
     width: $medium-half;
     margin-left: $small-half;
@@ -16,7 +19,7 @@
 
   &__text {
     margin: 0;
-    font-size: $medium-half;
+    font-size: $small + $tiny * 3;
     padding: $small-half;
   }
 }

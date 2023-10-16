@@ -20,6 +20,14 @@ const Taskbar = ({
     setShowStartMenu((current) => !current);
   };
 
+  const taskbar = windows.map((window) => {
+    if (activeWindow === window) {
+      return <Task key={window} active={true} window={window} />;
+    } else {
+      return <Task key={window} active={false} window={window} />;
+    }
+  });
+
   return (
     <footer className="taskbar">
       <button className="taskbar__start" onClick={handleShowStartMenu}>
@@ -27,10 +35,7 @@ const Taskbar = ({
         Start
       </button>
       <DividerLine orientation="vertical" />
-      <section className="taskbar__tasks">
-        <Task activeWindow={activeWindow} />
-        <Task activeWindow={activeWindow} />
-      </section>
+      <section className="taskbar__tasks">{taskbar}</section>
       <section className="taskbar__time">
         <p className="taskbar__clock">{time}</p>
       </section>

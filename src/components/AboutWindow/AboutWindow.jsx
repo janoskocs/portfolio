@@ -17,7 +17,7 @@ const AboutWindow = () => {
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
-            src={`public/images/icons/mycomp.png`}
+            src={`public/images/icons/about-me.png`}
             alt="Old computer"
             className="window__icon"
           />
@@ -54,7 +54,7 @@ const AboutWindow = () => {
         </section>
         <div className="window__control-btns">
           <DividerLine orientation="horizontal" />
-          <button className="window__cta-btn" autoFocus="true">
+          <button className="window__cta-btn" autoFocus={true}>
             What I do
           </button>
           <button className="window__close-btn">Close</button>
