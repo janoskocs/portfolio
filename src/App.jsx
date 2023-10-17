@@ -5,11 +5,12 @@ import Taskbar from "src/components/Taskbar";
 import Start from "./components/Start";
 import Modal from "./components/Modal";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const App = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
   const [windows, setWindows] = useState(["about-me"]);
   const [activeWindow, setActiveWindow] = useState("about-me");
+  const [showSentMailModal, setShowSentMailModal] = useState(false);
 
   const handleOpenWindow = (windowToOpen) => {
     if (!windows.includes(windowToOpen)) {
@@ -28,12 +29,16 @@ const App = () => {
   const checkEmailSent = () => {
     let isEmailSent = sessionStorage.getItem("emailSent");
     if (isEmailSent) {
-      console.log("your email was sent");
-      console.log(isEmailSent);
+      setShowSentMailModal(true);
+    } else {
+      setShowSentMailModal(false);
     }
   };
 
-  checkEmailSent();
+  useEffect(() => {
+    checkEmailSent();
+  }, []);
+
   return (
     <div className="main-container">
       <div className="desktop-container">
@@ -55,7 +60,10 @@ const App = () => {
         activeWindow={activeWindow}
         setActiveWindow={setActiveWindow}
       />
-      <Modal />
+      <Modal
+        showSentMailModal={showSentMailModal}
+        setShowSentMailModal={setShowSentMailModal}
+      />
     </div>
   );
 };

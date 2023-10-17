@@ -13,6 +13,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
+  &--hidden {
+    display: none;
+  }
   @include gui_base;
   @include flex(column, space-between);
 
