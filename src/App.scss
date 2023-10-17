@@ -10,4 +10,5 @@
 .desktop-container {
   display: flex;
   min-height: calc(100vh - 4rem);
+  position: relative;
 }
