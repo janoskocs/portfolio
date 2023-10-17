@@ -9,6 +9,7 @@
 .window {
   @include gui_base;
   @include gui_window_base;
+  @include flex(column, space-between);
 
   &__title-bar {
     @include gui_window_title;
@@ -37,7 +38,7 @@
 
   &__control-btns {
     width: 95%;
-    margin: 0 auto;
+    margin: $small auto;
   }
 
   &__cta-btn {
@@ -66,5 +67,25 @@
 .form {
   &__fieldset {
     @include flex(column);
+  }
+
+  &__name-input,
+  &__email-input,
+  &__message-input {
+    @include gui_input;
+    padding: $small-half;
+    font-size: $medium-half;
+    margin: $small-half 0;
+  }
+
+  &__message-input {
+    resize: none;
+    padding-bottom: $large;
+  }
+
+  &__send {
+    @include button;
+    padding: $small;
+    text-align: center;
   }
 }

@@ -21,6 +21,7 @@
   height: 92vh;
   margin: 0.5rem auto 0;
   padding: 1px;
+
   @include tablet {
     margin: 2rem auto 0;
     width: 80vw;
@@ -37,7 +38,8 @@
 }
 
 @mixin gui_input {
+  border: 0;
   background-color: $light;
-  box-shadow: inset -1px -1px $light, inset 1px 1px $base-mid,
-    inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+  box-shadow: inset -1px -1px $light, inset 1px 1px $shadow-mid,
+    inset -2px -2px $shadow-mid-light, inset 2px 2px $shadow-dark;
 }
