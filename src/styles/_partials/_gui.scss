@@ -7,14 +7,12 @@
   background-color: $base;
   border-top: 1px solid $base-light;
   border-bottom: 1px solid $base-dark;
-  box-shadow: inset -1px -1px $button-shadow-dark,
-    inset 1px 1px $button-shadow-mid-light, inset -2px -2px $button-shadow-mid,
-    inset 2px 2px $button-shadow-light;
+  box-shadow: inset -1px -1px $shadow-dark, inset 1px 1px $shadow-mid-light,
+    inset -2px -2px $shadow-mid, inset 2px 2px $shadow-light;
 }
 
 @mixin gui_box_inset {
-  box-shadow: inset -1px -1px $button-shadow-mid-light,
-    inset 1px 1px $button-shadow-mid;
+  box-shadow: inset -1px -1px $shadow-mid-light, inset 1px 1px $shadow-mid;
 }
 
 @mixin gui_window_base {
@@ -36,4 +34,10 @@
   padding: 3px 2px 3px 3px;
   margin: 2px;
   color: $light;
+}
+
+@mixin gui_input {
+  background-color: $light;
+  box-shadow: inset -1px -1px $light, inset 1px 1px $base-mid,
+    inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
 }
