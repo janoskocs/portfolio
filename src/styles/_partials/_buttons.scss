@@ -25,3 +25,16 @@
   font-weight: bold;
   background-color: $light-accent;
 }
+
+@mixin button__option {
+  all: unset;
+  padding: $small-half;
+  display: inline-block;
+  &:hover {
+    box-shadow: inset 1px 1px $shadow-light, inset -1px -1px $shadow-dark,
+      inset 2px 2px $shadow-mid-light, inset -2px -2px $shadow-mid-light;
+  }
+  &::first-letter {
+    text-decoration: underline;
+  }
+}

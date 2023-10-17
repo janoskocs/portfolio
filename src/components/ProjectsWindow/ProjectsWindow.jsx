@@ -37,6 +37,14 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             >
               GitHub
             </a>
+            <a
+              className="options__btn"
+              href="https://www.linkedin.com/in/janoskocs/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
           </div>
 
           <section className="view"></section>

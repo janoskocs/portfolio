@@ -6,6 +6,11 @@
 @use "../../styles/_partials/buttons" as *;
 @use "../../styles/_partials/variables" as *;
 
+.options {
+  &__btn {
+    @include button__option;
+  }
+}
 .folder-footer {
   @include flex();
 
