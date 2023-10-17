@@ -11,19 +11,31 @@
     @include flex(column, space-around);
   }
 
-  &__github {
-    @include flex(null, space-around);
-  }
-
   &__btn,
   &__live {
     @include button;
     padding: $small-half;
     margin-bottom: $small-half;
+    cursor: pointer;
   }
+
+  &__github {
+    @include flex(null, space-around);
+  }
+
   &__btn {
     width: 100%;
     @include flex(null, null, center);
+    &--disabled {
+      color: $base-dark;
+      text-shadow: 1px 1px 0 $light;
+      pointer-events: none;
+    }
+  }
+
+  &__link-img {
+    width: $medium;
+    margin-right: $small-half;
   }
 
   &__live {
@@ -32,18 +44,17 @@
     @include flex(null, center, center);
   }
 
-  &__link-img {
-    width: $medium;
-    margin-right: $small-half;
-  }
-
   &__live-pulse {
     width: $medium-half;
     height: $medium-half;
     border-radius: 50%;
     box-shadow: 0px 0px 1px 1px #0000001a;
-    animation: pulse-animation 2s infinite;
-    background-color: red;
+    background-color: $base-dark;
     margin-right: $small-half;
+
+    &--enabled {
+      background-color: $live;
+      animation: pulse-animation 2s infinite;
+    }
   }
 }

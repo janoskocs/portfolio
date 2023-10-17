@@ -7,12 +7,12 @@ const Icon = ({
   iconSelectedImage,
   iconAlt,
   selectedProject,
-  setSelectedProject,
+  handleSelectProject,
 }) => {
   const selected = selectedProject === name ? true : false;
 
   return (
-    <button className="icon" onClick={() => setSelectedProject(name)}>
+    <button className="icon" onClick={() => handleSelectProject(name)}>
       <img
         src={selected ? iconSelectedImage : icon}
         alt={iconAlt}

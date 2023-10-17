@@ -6,6 +6,14 @@ import "./ProjectsWindow.scss";
 
 const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
   const [selectedProject, setSelectedProject] = useState("");
+  const [selectedProjectDetails, setSelectedProjectDetails] = useState(null);
+
+  const handleSelectProject = (projectName) => {
+    setSelectedProject(projectName);
+    setSelectedProjectDetails(
+      projects.filter((project) => project.name === projectName)
+    );
+  };
 
   const icons = projects.map((icon) => {
     return (
@@ -17,7 +25,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
         iconSelectedImage={icon.iconSelected}
         iconAlt={icon.iconAlt}
         selectedProject={selectedProject}
-        setSelectedProject={setSelectedProject}
+        handleSelectProject={handleSelectProject}
       />
     );
   });
@@ -68,7 +76,10 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
 
           <section className="view">TEST</section>
 
-          <ProjectLinks selectedProject={selectedProject} />
+          <ProjectLinks
+            selectedProject={selectedProject}
+            selectedProjectDetails={selectedProjectDetails}
+          />
 
           <section className="icons">{icons}</section>
           <section className="folder-footer">
