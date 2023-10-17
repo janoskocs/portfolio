@@ -19,7 +19,7 @@ const Desktop = ({ handleOpenWindow, handleCloseWindow, activeWindow }) => {
           case "projects":
             return <DesktopWindow type={"projects"} />;
           default:
-            return <DesktopWindow type={"about-me"} />;
+            return " ";
         }
       })()}
     </main>

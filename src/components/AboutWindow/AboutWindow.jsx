@@ -17,7 +17,7 @@ const AboutWindow = ({ handleOpenWindow, handleCloseWindow }) => {
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
-            src={`public/images/icons/about-me.png`}
+            src={`/images/icons/about-me.png`}
             alt="Old computer"
             className="window__icon"
           />
@@ -33,7 +33,7 @@ const AboutWindow = ({ handleOpenWindow, handleCloseWindow }) => {
       <div className="window__body">
         <section className="about">
           <img
-            src={`public/images/icons/janoskocs_mycomputer1.png`}
+            src={`/images/icons/janoskocs_mycomputer1.png`}
             alt="Janos Kocs on a computer screen"
             className="about__image"
           />
