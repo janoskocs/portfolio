@@ -1,56 +1,9 @@
 @use "../../styles/_partials/resets";
 @use "../../styles/_partials/mixins" as *;
-@use "../../styles/_partials/colours" as *;
 @use "../../styles/_partials/responsive" as *;
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/buttons" as *;
 @use "../../styles/_partials/variables" as *;
-
-.window {
-  @include gui_base;
-  @include gui_window_base;
-  @include flex(column, space-between);
-
-  &__title-bar {
-    @include gui_window_title;
-  }
-
-  &__title-img-wrapper {
-    @include flex(null, null, center);
-  }
-
-  &__title {
-    font-size: $medium-half;
-    margin: 0;
-    margin-left: $small-half;
-  }
-
-  &__icon {
-    width: $medium-half;
-  }
-
-  &__button-close {
-    @include gui_base;
-    @include button;
-    padding: $tiny $tiny * 2;
-    color: $dark;
-  }
-
-  &__control-btns {
-    width: 95%;
-    margin: $small auto;
-  }
-
-  &__cta-btn {
-    @include button;
-    padding: $small-half $small;
-    margin-right: $small-half;
-  }
-
-  &__close-btn {
-    @extend .window__cta-btn;
-  }
-}
 
 .contact {
   width: 95%;

@@ -1,6 +1,6 @@
 import AboutWindow from "../AboutWindow";
-import DesktopWindow from "../DesktopWindow";
 import ContactWindow from "../ContactWindow";
+import ProjectsWindow from "../ProjectsWindow";
 import "./Desktop.scss";
 
 const Desktop = ({ handleOpenWindow, handleCloseWindow, activeWindow }) => {
@@ -23,7 +23,12 @@ const Desktop = ({ handleOpenWindow, handleCloseWindow, activeWindow }) => {
               />
             );
           case "projects":
-            return <DesktopWindow type={"projects"} />;
+            return (
+              <ProjectsWindow
+                handleOpenWindow={handleOpenWindow}
+                handleCloseWindow={handleCloseWindow}
+              />
+            );
           default:
             return " ";
         }

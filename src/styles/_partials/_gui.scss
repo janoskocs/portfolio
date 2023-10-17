@@ -3,7 +3,6 @@
 @use "./responsive" as *;
 
 @mixin gui_base {
-  box-shadow: inset 1px 0 $light;
   background-color: $base;
   border-top: 1px solid $base-light;
   border-bottom: 1px solid $base-dark;
