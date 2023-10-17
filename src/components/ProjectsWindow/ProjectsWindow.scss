@@ -4,3 +4,15 @@
 @use "../../styles/_partials/responsive" as *;
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/buttons" as *;
+@use "../../styles/_partials/variables" as *;
+
+.folder-footer {
+  @include flex();
+
+  &__text {
+    @include gui_box_inset;
+    margin: 0;
+    padding: $tiny * 2;
+    width: 100%;
+  }
+}

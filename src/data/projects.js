@@ -1,4 +1,4 @@
-export const menuItems = [
+export const projects = [
   {
     id: "p1",
     name: "MemoVault",

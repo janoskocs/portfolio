@@ -1,4 +1,5 @@
 import "./ProjectsWindow.scss";
+import { projects } from "../../data/projects";
 
 const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
   return (
@@ -22,7 +23,12 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
       <div className="window__body">
         <section className="projects">
           <div className="options">
-            <button className="options__btn">Contact me</button>
+            <button
+              className="options__btn"
+              onClick={() => handleOpenWindow("contact-me")}
+            >
+              Contact me
+            </button>
             <a
               className="options__btn"
               href="https://github.com/janoskocs"
@@ -32,6 +38,18 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
               GitHub
             </a>
           </div>
+
+          <section className="view"></section>
+          <section className="icons"></section>
+          <section className="folder-footer">
+            <p className="folder-footer__text">
+              {!projects && "No projects."}
+              {projects && projects.length}{" "}
+              {projects && projects.length > 1 ? "objects" : "object"}
+            </p>
+            <p className="folder-footer__text">515MB</p>
+            <p className="folder-footer__text">Projects</p>
+          </section>
         </section>
       </div>
     </div>
