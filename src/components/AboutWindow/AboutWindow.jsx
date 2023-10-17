@@ -43,11 +43,10 @@ const AboutWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             </h3>
             <DividerLine orientation="horizontal" />
             <p className="about__text">
-              Hey there, I&apos;m János, I just completed a tech bootcamp and
-              now I&apos;m making the web more interactive. When I was a kid, my
-              computer ran Windows 98, and it was the coolest thing ever.
-              That&apos;s where I got the inspiration for my epic portfolio
-              website.
+              Hey there, I&apos;m János, I&apos;m making the web more
+              interactive. When I was a kid, my computer ran Windows 98, and it
+              was the coolest thing ever. That&apos;s where I got the
+              inspiration for my epic portfolio website.
             </p>
             <DividerLine orientation="horizontal" />
 
