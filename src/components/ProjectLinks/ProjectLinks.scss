@@ -1,0 +1,49 @@
+@use "../../styles/_partials/mixins" as *;
+@use "../../styles/_partials/colours" as *;
+@use "../../styles/_partials/responsive" as *;
+@use "../../styles/_partials/gui" as *;
+@use "../../styles/_partials/buttons" as *;
+@use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/animations" as *;
+
+.links {
+  &__fieldset {
+    @include flex(column, space-around);
+  }
+
+  &__github {
+    @include flex(null, space-around);
+  }
+
+  &__btn,
+  &__live {
+    @include button;
+    padding: $small-half;
+    margin-bottom: $small-half;
+  }
+  &__btn {
+    width: 100%;
+    @include flex(null, null, center);
+  }
+
+  &__live {
+    text-align: center;
+    margin-bottom: 0;
+    @include flex(null, center, center);
+  }
+
+  &__link-img {
+    width: $medium;
+    margin-right: $small-half;
+  }
+
+  &__live-pulse {
+    width: $medium-half;
+    height: $medium-half;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px 1px #0000001a;
+    animation: pulse-animation 2s infinite;
+    background-color: red;
+    margin-right: $small-half;
+  }
+}

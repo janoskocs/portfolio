@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { projects } from "../../data/projects";
 import Icon from "../Icon";
+import ProjectLinks from "../ProjectLinks";
 import "./ProjectsWindow.scss";
 
 const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
@@ -66,6 +67,9 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
           </div>
 
           <section className="view">TEST</section>
+
+          <ProjectLinks selectedProject={selectedProject} />
+
           <section className="icons">{icons}</section>
           <section className="folder-footer">
             <p className="folder-footer__text">
