@@ -64,6 +64,11 @@ const ContactWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             className="form"
             onSubmit={handleSubmit}
           >
+            <input
+              type="hidden"
+              name="_next"
+              value="http://localhost:5173"
+            ></input>
             <fieldset className="form__fieldset">
               <legend className="form__legend">Send me a message</legend>
               <label htmlFor="name" className="form__label">

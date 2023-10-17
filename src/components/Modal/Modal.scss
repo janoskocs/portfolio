@@ -1,0 +1,55 @@
+@use "../../styles/_partials/resets";
+@use "../../styles/_partials/mixins" as *;
+@use "../../styles/_partials/colours" as *;
+@use "../../styles/_partials/responsive" as *;
+@use "../../styles/_partials/gui" as *;
+@use "../../styles/_partials/buttons" as *;
+@use "../../styles/_partials/variables" as *;
+
+.modal {
+  @include gui_base;
+  @include flex(column, space-between);
+
+  &__icon {
+    width: $medium-half;
+  }
+
+  &__title-bar {
+    @include gui_window_title;
+  }
+
+  &__title-img-wrapper {
+    @include flex(null, null, center);
+  }
+
+  &__title {
+    font-size: $medium-half;
+    margin: 0;
+    margin-left: $small-half;
+  }
+
+  &__button-close {
+    @include gui_base;
+    @include button;
+    padding: $tiny $tiny * 2;
+    color: $dark;
+  }
+
+  &__body {
+    @include flex(column, center, center);
+    &-wrapper {
+      margin-top: $small;
+      @include flex(null, space-around);
+    }
+  }
+
+  &__ok-btn {
+    @include button;
+    padding: $small $large;
+    margin: $small;
+  }
+
+  &__image {
+    margin-right: $medium;
+  }
+}
