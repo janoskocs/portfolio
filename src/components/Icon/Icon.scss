@@ -1,0 +1,14 @@
+@use "../../styles/_partials/mixins" as *;
+@use "../../styles/_partials/variables" as *;
+
+.icon {
+  @include flex(column, center, center);
+  margin: $small;
+  &__image {
+    width: $large;
+  }
+
+  &__title {
+    margin: $small 0 0 0;
+  }
+}

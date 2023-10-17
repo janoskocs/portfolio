@@ -1,7 +1,20 @@
-import "./ProjectsWindow.scss";
 import { projects } from "../../data/projects";
+import Icon from "../Icon";
+import "./ProjectsWindow.scss";
 
 const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
+  const icons = projects.map((icon) => {
+    return (
+      <Icon
+        key={icon.id}
+        name={icon.name}
+        icon={icon.icon}
+        iconSelectedImage={icon.iconSelected}
+        iconAlt={icon.iconAlt}
+        selected={false}
+      />
+    );
+  });
   return (
     <div className="window">
       <div className="window__title-bar">
@@ -47,8 +60,8 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             </a>
           </div>
 
-          <section className="view"></section>
-          <section className="icons"></section>
+          <section className="view">TEST</section>
+          <section className="icons">{icons}</section>
           <section className="folder-footer">
             <p className="folder-footer__text">
               {!projects && "No projects."}

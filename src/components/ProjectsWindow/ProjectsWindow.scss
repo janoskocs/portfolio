@@ -1,4 +1,3 @@
-@use "../../styles/_partials/resets";
 @use "../../styles/_partials/mixins" as *;
 @use "../../styles/_partials/colours" as *;
 @use "../../styles/_partials/responsive" as *;
@@ -11,6 +10,13 @@
     @include button__option;
   }
 }
+
+.icons {
+  @include gui_box_inset;
+  @include flex(null, space-around, center);
+  background-color: $light;
+}
+
 .folder-footer {
   @include flex();
 
