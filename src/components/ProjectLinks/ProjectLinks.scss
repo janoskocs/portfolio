@@ -9,6 +9,7 @@
 .links {
   &__fieldset {
     @include flex(column, space-around);
+    border: 1px solid $base-light;
   }
 
   &__btn,

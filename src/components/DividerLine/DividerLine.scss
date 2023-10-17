@@ -2,9 +2,28 @@
 
 .horizontal-line {
   margin: $small-half 0;
+  &--colour {
+    padding: $tiny;
+    background: linear-gradient(
+      to right,
+      red 25%,
+      yellow 25% 50%,
+      green 50% 75%,
+      lightblue 75% 100%
+    );
+  }
 }
 
 .vertical-line {
   height: 80%;
   margin: $small-half $small-half;
+  &--colour {
+    background: linear-gradient(
+      to right,
+      red 25%,
+      yellow 25% 50%,
+      green 50% 75%,
+      lightblue 75% 100%
+    );
+  }
 }

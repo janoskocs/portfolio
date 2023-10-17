@@ -1,9 +1,9 @@
-@use "../../styles/_partials/resets";
 @use "../../styles/_partials/mixins" as *;
 @use "../../styles/_partials/responsive" as *;
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/buttons" as *;
 @use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/colours" as *;
 
 .contact {
   width: 95%;
@@ -19,6 +19,7 @@
 
 .form {
   &__fieldset {
+    border: 1px solid $base-light;
     @include flex(column);
   }
 

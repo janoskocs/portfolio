@@ -3,6 +3,7 @@ import { projects } from "../../data/projects";
 import Icon from "../Icon";
 import ProjectLinks from "../ProjectLinks";
 import "./ProjectsWindow.scss";
+import ProjectView from "../ProjectView";
 
 const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
   const [selectedProject, setSelectedProject] = useState("");
@@ -73,9 +74,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
               LinkedIn
             </a>
           </div>
-
-          <section className="view">TEST</section>
-
+          <ProjectView selectedProjectDetails={selectedProjectDetails} />
           <ProjectLinks
             selectedProject={selectedProject}
             selectedProjectDetails={selectedProjectDetails}
