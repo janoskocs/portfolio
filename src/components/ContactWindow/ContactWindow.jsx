@@ -14,7 +14,11 @@ const ContactWindow = ({ handleOpenWindow, handleCloseWindow }) => {
     setInput({ ...input, [form.name]: form.value });
   };
 
-  console.log(input);
+  const handleSubmit = () => {
+    sessionStorage.clear();
+    sessionStorage.setItem("emailSent", "true");
+  };
+
   return (
     <div className="window">
       <div className="window__title-bar">
@@ -58,6 +62,7 @@ const ContactWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             action="https://formsubmit.co/janos.kocs@outlook.com"
             method="POST"
             className="form"
+            onSubmit={handleSubmit}
           >
             <fieldset className="form__fieldset">
               <legend className="form__legend">Send me a message</legend>

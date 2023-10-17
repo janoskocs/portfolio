@@ -22,6 +22,16 @@ const App = () => {
     );
     setActiveWindow("");
   };
+
+  const checkEmailSent = () => {
+    let isEmailSent = sessionStorage.getItem("emailSent");
+    if (isEmailSent) {
+      console.log("your email was sent");
+      console.log(isEmailSent);
+    }
+  };
+
+  checkEmailSent();
   return (
     <div className="main-container">
       <div className="desktop-container">
