@@ -1,7 +1,8 @@
 export const projects = [
   {
     id: "p1",
-    name: "MemoVault",
+    title: "MemoVault",
+    name: "memovault",
     icon: "/images/icons/memovault.png",
     iconSelected: "/images/icons/memovault.png",
     iconAlt: "Cartoon style drawn shutter",
@@ -21,7 +22,8 @@ export const projects = [
   },
   {
     id: "p2",
-    name: "Sunset Restaurant",
+    title: "Sunset Restaurant",
+    name: "sunset-restaurant",
     icon: "/images/icons/sunsetlogo.png",
     iconSelected: "/images/icons/sunsetlogo.png",
     iconAlt: "Palm trees in front of triangle shapes",
@@ -39,4 +41,64 @@ export const projects = [
     description:
       "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
   },
+  // {
+  //   id: "p3",
+  //   name: "MemoVault",
+  //   icon: "/images/icons/memovault.png",
+  //   iconSelected: "/images/icons/memovault.png",
+  //   iconAlt: "Cartoon style drawn shutter",
+  //   screenshots: [""],
+  //   type: "project",
+  //   address: "https://memovault.herokuapp.com",
+  //   github: {
+  //     client_link: "https://github.com/janoskocs/client-capstone",
+  //     server_link: "https://github.com/janoskocs/server-capstone",
+  //     general: "no-link",
+  //   },
+  //   published_at: "14/04/2023",
+  //   techstack: ["JavaScript", "React", "Express", "Node", "MongoDB"],
+  //   libraries: ["Recharts", "Mongoose", "paperCSS", "sentiment analysis API"],
+  //   description:
+  //     "MemoVault is a social media app where users can upload moments and the app detects and keeps track of emotions. User can reflect, connect with friends and appreciate other people's moments.",
+  // },
+  // {
+  //   id: "p4",
+  //   name: "MemoVault",
+  //   icon: "/images/icons/memovault.png",
+  //   iconSelected: "/images/icons/memovault.png",
+  //   iconAlt: "Cartoon style drawn shutter",
+  //   screenshots: [""],
+  //   type: "project",
+  //   address: "https://memovault.herokuapp.com",
+  //   github: {
+  //     client_link: "https://github.com/janoskocs/client-capstone",
+  //     server_link: "https://github.com/janoskocs/server-capstone",
+  //     general: "no-link",
+  //   },
+  //   published_at: "14/04/2023",
+  //   techstack: ["JavaScript", "React", "Express", "Node", "MongoDB"],
+  //   libraries: ["Recharts", "Mongoose", "paperCSS", "sentiment analysis API"],
+  //   description:
+  //     "MemoVault is a social media app where users can upload moments and the app detects and keeps track of emotions. User can reflect, connect with friends and appreciate other people's moments.",
+  // },
+  // {
+  //   id: "p5",
+  //   name: "MemoVault",
+  //   icon: "/images/icons/memovault.png",
+  //   iconSelected: "/images/icons/memovault.png",
+  //   iconAlt: "Cartoon style drawn shutter",
+  //   screenshots: [""],
+  //   type: "project",
+  //   address: "https://memovault.herokuapp.com",
+  //   github: {
+  //     client_link: "https://github.com/janoskocs/client-capstone",
+  //     server_link: "https://github.com/janoskocs/server-capstone",
+  //     general: "no-link",
+  //   },
+  //   published_at: "14/04/2023",
+  //   techstack: ["JavaScript", "React", "Express", "Node", "MongoDB"],
+  //   libraries: ["Recharts", "Mongoose", "paperCSS", "sentiment analysis API"],
+  //   description:
+  //     "MemoVault is a social media app where users can upload moments and the app detects and keeps track of emotions. User can reflect, connect with friends and appreciate other people's moments.",
+  // },
 ];

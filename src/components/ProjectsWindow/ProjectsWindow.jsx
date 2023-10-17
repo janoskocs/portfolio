@@ -1,17 +1,22 @@
+import { useState } from "react";
 import { projects } from "../../data/projects";
 import Icon from "../Icon";
 import "./ProjectsWindow.scss";
 
 const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
+  const [selectedProject, setSelectedProject] = useState("");
+
   const icons = projects.map((icon) => {
     return (
       <Icon
         key={icon.id}
         name={icon.name}
+        title={icon.title}
         icon={icon.icon}
         iconSelectedImage={icon.iconSelected}
         iconAlt={icon.iconAlt}
-        selected={false}
+        selectedProject={selectedProject}
+        setSelectedProject={setSelectedProject}
       />
     );
   });

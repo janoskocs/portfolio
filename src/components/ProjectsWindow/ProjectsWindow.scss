@@ -8,6 +8,7 @@
 .options {
   &__btn {
     @include button__option;
+    cursor: pointer;
   }
 }
 

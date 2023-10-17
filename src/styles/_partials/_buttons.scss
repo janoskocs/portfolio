@@ -37,4 +37,9 @@
   &::first-letter {
     text-decoration: underline;
   }
+
+  &:active {
+    box-shadow: inset -1px -1px $shadow-light, inset 1px 1px $shadow-dark,
+      inset -2px -2px $shadow-mid-light, inset 2px 2px $shadow-mid-light;
+  }
 }

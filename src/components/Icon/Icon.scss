@@ -1,14 +1,22 @@
 @use "../../styles/_partials/mixins" as *;
 @use "../../styles/_partials/variables" as *;
+@use "../../styles/_partials/colours" as *;
 
 .icon {
+  all: unset;
   @include flex(column, center, center);
   margin: $small;
+  cursor: pointer;
+
   &__image {
-    width: $large;
+    width: $large + $small;
   }
 
   &__title {
     margin: $small 0 0 0;
+    &--selected {
+      color: $light;
+      background-color: $accent-color;
+    }
   }
 }

@@ -1,8 +1,18 @@
 import "./Icon.scss";
 
-const Icon = ({ name, icon, iconSelectedImage, iconAlt, selected }) => {
+const Icon = ({
+  name,
+  title,
+  icon,
+  iconSelectedImage,
+  iconAlt,
+  selectedProject,
+  setSelectedProject,
+}) => {
+  const selected = selectedProject === name ? true : false;
+
   return (
-    <div className="icon">
+    <button className="icon" onClick={() => setSelectedProject(name)}>
       <img
         src={selected ? iconSelectedImage : icon}
         alt={iconAlt}
@@ -13,9 +23,9 @@ const Icon = ({ name, icon, iconSelectedImage, iconAlt, selected }) => {
           selected ? "icon__title icon__title--selected" : "icon__title"
         }
       >
-        {name}
+        {title}
       </p>
-    </div>
+    </button>
   );
 };
 export default Icon;
