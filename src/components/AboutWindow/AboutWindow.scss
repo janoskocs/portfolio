@@ -12,13 +12,20 @@
   font-size: $medium-half;
 
   @include tablet {
-    width: 80%;
-    font-size: $medium;
-    @include flex(null, center, center);
+    @include flex(null, space-around, center);
+    width: 85%;
   }
 
+  &__side {
+    @include tablet {
+      width: 60%;
+    }
+  }
   &__image {
-    width: 35%;
+    max-width: 35%;
+    @include tablet {
+      max-width: $large * 6;
+    }
   }
 
   &__title {
@@ -27,6 +34,9 @@
 
   &__text {
     margin: $small-half 0;
+    @include tablet {
+      margin: $small 0;
+    }
   }
 
   &__skills {
@@ -36,10 +46,16 @@
   &__skill {
     width: 9rem;
     text-align: center;
+    @include tablet {
+      width: 10rem;
+    }
   }
 
   &__skill-icon {
     width: 4rem;
+    @include tablet {
+      width: 5rem;
+    }
   }
 
   &__skill-title {
