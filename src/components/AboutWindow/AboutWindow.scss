@@ -7,7 +7,7 @@
 
 .about {
   width: 95%;
-  margin: $small auto 0;
+  margin: $small-half auto;
   text-align: center;
   font-size: $medium-half;
 
@@ -26,7 +26,7 @@
   }
 
   &__text {
-    margin: $small 0;
+    margin: $small-half 0;
   }
 
   &__skills {
