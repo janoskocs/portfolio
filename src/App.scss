@@ -3,12 +3,10 @@
 @use "./styles/_partials/responsive" as *;
 @use "./styles/_partials/mixins" as *;
 
-.main-container {
+body {
   background-color: $background;
 }
 
 .desktop-container {
-  display: flex;
-  min-height: calc(100vh - 4rem);
   position: relative;
 }

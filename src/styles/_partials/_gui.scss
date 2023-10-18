@@ -1,6 +1,7 @@
 @use "./colours" as *;
 @use "./mixins" as *;
 @use "./responsive" as *;
+@use "./variables" as *;
 
 @mixin gui_base {
   background-color: $base;
@@ -17,8 +18,8 @@
 @mixin gui_window_base {
   width: 92vw;
   max-width: $max-content;
-  height: 92vh;
-  margin: 0.5rem auto 0;
+  // height: 80vh;
+  margin: $medium-half auto 0;
   padding: 1px 2px;
 
   @include tablet {

@@ -8,6 +8,9 @@
 .taskbar {
   @include flex(null, flex-start, center);
   height: 4rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: $base;
   border-top: 1px solid $base-light;
   border-bottom: 1px solid $base-dark;
