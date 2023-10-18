@@ -41,4 +41,46 @@ export const projects = [
     description:
       "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
   },
+  {
+    id: "p3",
+    title: "Sunset Restaurant1",
+    name: "sunset-restaurant1",
+    icon: "/images/icons/sunsetlogo.png",
+    iconSelected: "/images/icons/sunsetlogo.png",
+    iconAlt: "Palm trees in front of triangle shapes",
+    screenshots: [""],
+    type: "project",
+    address: "https://sunset-restaurant.herokuapp.com/",
+    github: {
+      client_link: "no-link",
+      server_link: "no-link",
+      general: "https://github.com/janoskocs/sunset-web-app/",
+    },
+    published_at: "14/04/2023",
+    techstack: ["JavaScript", "EJS", "Express", "Node", "MongoDB"],
+    libraries: [""],
+    description:
+      "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
+  },
+  {
+    id: "p3",
+    title: "Sunset Restaurant2",
+    name: "sunset-restaurant2",
+    icon: "/images/icons/sunsetlogo.png",
+    iconSelected: "/images/icons/sunsetlogo.png",
+    iconAlt: "Palm trees in front of triangle shapes",
+    screenshots: [""],
+    type: "project",
+    address: "https://sunset-restaurant.herokuapp.com/",
+    github: {
+      client_link: "no-link",
+      server_link: "no-link",
+      general: "https://github.com/janoskocs/sunset-web-app/",
+    },
+    published_at: "14/04/2023",
+    techstack: ["JavaScript", "EJS", "Express", "Node", "MongoDB"],
+    libraries: [""],
+    description:
+      "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
+  },
 ];

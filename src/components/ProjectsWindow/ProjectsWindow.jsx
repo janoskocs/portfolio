@@ -31,7 +31,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
     );
   });
   return (
-    <div className="window">
+    <div className="window window--projects">
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
@@ -75,12 +75,12 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             </a>
           </div>
           <ProjectView selectedProjectDetails={selectedProjectDetails} />
+
+          <section className="icons">{icons}</section>
           <ProjectLinks
             selectedProject={selectedProject}
             selectedProjectDetails={selectedProjectDetails}
           />
-
-          <section className="icons">{icons}</section>
           <section className="folder-footer">
             <p className="folder-footer__text">
               {!projects && "No projects."}

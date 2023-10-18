@@ -3,9 +3,12 @@
 @use "../../styles/_partials/responsive" as *;
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/buttons" as *;
+@use "../../styles/_partials/variables" as *;
 
 .view {
   @include gui_box_inset;
   background-color: $light;
   background: linear-gradient(150deg, $cloud 10%, $light 50%);
+  height: 29vh;
+  padding: $small-half;
 }

@@ -5,6 +5,11 @@
 @use "../../styles/_partials/buttons" as *;
 @use "../../styles/_partials/variables" as *;
 
+.window--projects {
+  display: block;
+}
+.projects {
+}
 .options {
   &__btn {
     @include button__option;
@@ -14,8 +19,9 @@
 
 .icons {
   @include gui_box_inset;
-  @include flex(null, space-around, center);
+  @include flex(null, space-around, center, wrap);
   background-color: $light;
+  height: 30vh;
 }
 
 .folder-footer {
