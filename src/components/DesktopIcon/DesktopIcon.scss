@@ -10,6 +10,7 @@
 
   &__menu-icon {
     width: 4rem;
+    margin-bottom: $small;
   }
 
   &__button {
@@ -17,6 +18,8 @@
     width: 100%;
     cursor: pointer;
     @include flex(column, center, center);
+    color: $light;
+    text-shadow: 1px 1px $base-dark;
 
     &:hover {
       background-color: $accent-color;

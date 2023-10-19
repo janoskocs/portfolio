@@ -9,4 +9,5 @@ body {
 
 .desktop-container {
   position: relative;
+  @include flex();
 }
