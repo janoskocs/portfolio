@@ -42,7 +42,7 @@ const App = () => {
   return (
     <div className="main-container">
       <div className="desktop-container">
-        <DesktopIcons />
+        <DesktopIcons handleOpenWindow={handleOpenWindow} />
         <Desktop
           activeWindow={activeWindow}
           handleOpenWindow={handleOpenWindow}
