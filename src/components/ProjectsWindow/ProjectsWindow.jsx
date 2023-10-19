@@ -31,7 +31,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
     );
   });
   return (
-    <div className="window window--projects">
+    <div className="window">
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
@@ -48,7 +48,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
           X
         </button>
       </div>
-      <div className="window__body">
+      <div className="window__body window__body--projects">
         <section className="projects">
           <div className="options">
             <button
