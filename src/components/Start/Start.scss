@@ -15,6 +15,10 @@
   border-top: 1px solid $light;
   box-shadow: inset 1px 1px $base-dark;
 
+  &--hidden {
+    display: none;
+  }
+
   &__title-wrapper {
     @include flex(column-reverse, center, center);
     background: linear-gradient(360deg, #0000ff, #000080);
@@ -30,16 +34,14 @@
     rotate: 180deg;
     writing-mode: vertical-lr;
     color: $light;
-  }
-  &--hidden {
-    display: none;
+    padding-bottom: $small;
   }
 
   &__list {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    // @include flex(column, space-between);
+    @include flex(column, space-between);
   }
 
   &__list-item {
