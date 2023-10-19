@@ -10,7 +10,7 @@
 }
 
 .window {
-  @include gui_base();
+  @include gui_base;
   @include gui_window_base;
   @include flex(column, space-between);
 

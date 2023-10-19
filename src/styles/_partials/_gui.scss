@@ -18,14 +18,12 @@
 @mixin gui_window_base {
   width: 92vw;
   max-width: $max-content;
-  // height: 80vh;
   margin: $medium-half auto 0;
   padding: 1px 2px;
 
   @include tablet {
     margin: 2rem auto 0;
     width: 80vw;
-    height: 85vh;
   }
 }
 

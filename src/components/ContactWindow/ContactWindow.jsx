@@ -57,7 +57,7 @@ const ContactWindow = ({ handleOpenWindow, handleCloseWindow }) => {
               janos.kocs@outlook.com
             </a>
           </p>
-          <DividerLine orientation="horizontal" />
+
           <form
             action="https://formsubmit.co/janos.kocs@outlook.com"
             method="POST"
