@@ -28,6 +28,15 @@ export const menuItems = [
   },
   {
     id: 4,
+    name: "My CV",
+    alt: "My CV",
+    icon: "/images/icons/about-me.png",
+    action: "my-cv",
+    type: "menu",
+    address: "no-address",
+  },
+  {
+    id: 5,
     name: "LinkedIn",
     alt: "LinkedIn",
     icon: "/images/icons/linkedin.png",
@@ -36,7 +45,7 @@ export const menuItems = [
     address: "https://www.linkedin.com/in/janoskocs",
   },
   {
-    id: 5,
+    id: 6,
     name: "GitHub",
     alt: "GitHub",
     icon: "/images/icons/github.png",

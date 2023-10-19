@@ -1,6 +1,7 @@
 @use "../../styles/_partials/gui" as *;
 @use "../../styles/_partials/colours" as *;
 @use "../../styles/_partials/mixins" as *;
+@use "../../styles/_partials/variables" as *;
 
 .start {
   position: absolute;
@@ -36,11 +37,14 @@
 
   &__list {
     padding: 0;
+    margin: 0;
     list-style-type: none;
+    // @include flex(column, space-between);
   }
 
   &__list-item {
     margin: 0.1rem;
+    padding-right: $small-half;
   }
 
   &__menu-icon {
@@ -53,6 +57,7 @@
     width: 100%;
     cursor: pointer;
     @include flex(null, null, center);
+    padding-right: $small-half;
 
     &:hover {
       background-color: $accent-color;
