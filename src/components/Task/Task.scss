@@ -10,10 +10,9 @@
   margin-right: $tiny * 2;
 
   &--shrink {
-    @include mobile {
-      width: $medium * 2;
-    }
-    @include tablet {
+    width: $medium * 2;
+
+    @include mobile-large {
       width: auto;
     }
   }
