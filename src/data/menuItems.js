@@ -31,7 +31,7 @@ export const menuItems = [
     name: "My CV",
     alt: "My CV",
     icon: "/images/icons/about-me.png",
-    action: "my-cv",
+    action: "my-CV",
     type: "menu",
     address: "no-address",
   },

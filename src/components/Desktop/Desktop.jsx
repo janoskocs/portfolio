@@ -1,4 +1,5 @@
 import AboutWindow from "../AboutWindow";
+import CVWindow from "../CVWindow";
 import ContactWindow from "../ContactWindow";
 import ProjectsWindow from "../ProjectsWindow";
 import "./Desktop.scss";
@@ -29,6 +30,8 @@ const Desktop = ({ handleOpenWindow, handleCloseWindow, activeWindow }) => {
                 handleCloseWindow={handleCloseWindow}
               />
             );
+          case "my-CV":
+            return <CVWindow handleCloseWindow={handleCloseWindow} />;
           default:
             return " ";
         }
