@@ -1,7 +1,14 @@
+import { useState } from "react";
 import DividerLine from "../DividerLine";
 import "./CVWindow.scss";
 
 const CVWindow = ({ handleCloseWindow }) => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = () => {
+    sessionStorage.clear();
+    sessionStorage.setItem("downloadCV", "true");
+  };
   return (
     <div className="window">
       <div className="window__title-bar">
@@ -31,7 +38,12 @@ const CVWindow = ({ handleCloseWindow }) => {
           Please note this was updated on the
           <span className="cv__highlight"> 20th of October, 2023</span>.
         </p>
-        <form action="" className="cv-form">
+        <form
+          action="https://formsubmit.co/janos.kocs@outlook.com"
+          method="POST"
+          className="cv-form"
+          onSubmit={handleSubmit}
+        >
           <fieldset className="cv-form__fieldset">
             <legend className="cv-form__legend">Enter your email</legend>
             <input
@@ -39,8 +51,16 @@ const CVWindow = ({ handleCloseWindow }) => {
               name="email"
               type="email"
               placeholder="For e.g. jane@msn.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
+            <input
+              type="hidden"
+              name="_next"
+              value="http://localhost:5173"
+            ></input>
+            <input type="hidden" name="_subject" value="CV Download"></input>
             <button className="cv-form__submit" type="submit">
               Download
             </button>

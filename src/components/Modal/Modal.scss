@@ -11,6 +11,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @include tablet {
+    width: 40vw;
+  }
 
   &--hidden {
     display: none;
@@ -56,6 +59,7 @@
     @include button;
     padding: $small $large;
     margin: $small;
+    cursor: pointer;
   }
 
   &__image {

@@ -11,6 +11,7 @@ const App = () => {
   const [windows, setWindows] = useState(["about-me"]);
   const [activeWindow, setActiveWindow] = useState("about-me");
   const [showSentMailModal, setShowSentMailModal] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
 
   const handleOpenWindow = (windowToOpen) => {
     if (!windows.includes(windowToOpen)) {
@@ -35,8 +36,18 @@ const App = () => {
     }
   };
 
+  const checkCVDownload = () => {
+    let isCVDownloaded = sessionStorage.getItem("downloadCV");
+    if (isCVDownloaded) {
+      setShowDownloadModal(true);
+    } else {
+      setShowDownloadModal(false);
+    }
+  };
+
   useEffect(() => {
     checkEmailSent();
+    checkCVDownload();
   }, []);
 
   return (
@@ -61,6 +72,8 @@ const App = () => {
         setActiveWindow={setActiveWindow}
       />
       <Modal
+        setShowDownloadModal={setShowDownloadModal}
+        showDownloadModal={showDownloadModal}
         showSentMailModal={showSentMailModal}
         setShowSentMailModal={setShowSentMailModal}
       />
