@@ -1,6 +1,6 @@
 import "./Modal.scss";
 
-import cv from "../../data/cv.txt";
+import cv from "../../data/janos_kocs_cv.pdf";
 
 const Modal = ({
   showSentMailModal,
@@ -46,7 +46,7 @@ const Modal = ({
               className="modal__ok-btn"
               onClick={handleHideModal}
               href={cv}
-              download="cv"
+              download="janos_kocs_cv"
               target="_blank"
               rel="noreferrer"
             >

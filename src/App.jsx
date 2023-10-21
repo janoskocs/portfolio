@@ -40,6 +40,7 @@ const App = () => {
     let isCVDownloaded = sessionStorage.getItem("downloadCV");
     if (isCVDownloaded) {
       setShowDownloadModal(true);
+      handleOpenWindow("my-CV");
     } else {
       setShowDownloadModal(false);
     }
