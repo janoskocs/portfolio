@@ -35,7 +35,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
-            src={`public/images/icons/projects.png`}
+            src={`images/icons/projects.png`}
             alt="Open folder"
             className="window__icon"
           />
