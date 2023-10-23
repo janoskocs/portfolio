@@ -43,8 +43,10 @@
   &__button-close {
     @include gui_base;
     @include button;
-    padding: $tiny $tiny * 2;
+    padding: $tiny $small-half;
     color: $dark;
+    font-weight: bold;
+    font-size: $medium-half;
   }
 
   &__control-btns {
