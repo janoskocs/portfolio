@@ -1,8 +1,24 @@
-# React + Vite
+## János Kócs | Software Engineer Portfolio
+Project Link: [https://janoskocs.com/](https://janoskocs.com/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Checkout the source code for my portfolio site!
+My first computer had Windows 98 on it and I thought it was the coolest thing EVER. As I am going through a career change, I wanted to pay homage to Win98 as it really inspired me to build software. 
+This is version 3; I completely rebuilt it from the ground up using React and Sass. 
 
-Currently, two official plugins are available:
+![Portfolio screenshot](https://janoskocs.com/images/screenshot1.png)
+## Installation steps
+1. Clone the repo
+   ```sh
+   git clone https://github.com/janoskocs/portfolio.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the following command
+   ```sh
+   npm run dev
+   ```
+## Contact
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+János Kócs  - janos.kocs@outlook.com
