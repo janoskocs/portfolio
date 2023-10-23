@@ -14,7 +14,7 @@ const CVWindow = ({ handleCloseWindow }) => {
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
-            src={`/images/icons/my-cv.png`}
+            src={`/images/icons/my-CV.png`}
             alt="Old computer"
             className="window__icon"
           />
@@ -29,7 +29,7 @@ const CVWindow = ({ handleCloseWindow }) => {
       </div>
       <section className="cv">
         <h3 className="cv__title">Download my CV</h3>
-        <img src="/images/icons/my-cv.png" alt="Text" className="cv__img" />
+        <img src="/images/icons/my-CV.png" alt="Text" className="cv__img" />
         <DividerLine orientation={"horizontal"} />
         <p className="cv__text">
           To download my CV, please enter your email below.
