@@ -38,6 +38,7 @@
 @mixin gui_input {
   border: 0;
   background-color: $light;
+  font-family: Tahoma, sans-serif;
   box-shadow: inset -1px -1px $light, inset 1px 1px $shadow-mid,
     inset -2px -2px $shadow-mid-light, inset 2px 2px $shadow-dark;
 }
