@@ -14,7 +14,7 @@ const CVWindow = ({ handleCloseWindow }) => {
       <div className="window__title-bar">
         <div className="window__title-img-wrapper">
           <img
-            src={`/images/icons/contact-me.png`}
+            src={`/images/icons/my-cv.png`}
             alt="Old computer"
             className="window__icon"
           />
