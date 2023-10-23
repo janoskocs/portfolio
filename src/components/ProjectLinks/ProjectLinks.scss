@@ -32,6 +32,9 @@
       text-shadow: 1px 1px 0 $light;
       pointer-events: none;
     }
+    &--general {
+      @include flex(null, center);
+    }
   }
 
   &__link-img {

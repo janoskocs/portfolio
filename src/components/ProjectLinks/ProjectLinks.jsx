@@ -38,32 +38,54 @@ const ProjectLinks = ({ selectedProject, selectedProjectDetails }) => {
       <fieldset className="links__fieldset">
         <legend className="links__legend">Check out the source code</legend>
         <div className="links__github">
-          <a
-            href={selectedProjectDetails[0].github.client_link}
-            className="links__btn"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="/images/icons/github.png"
-              alt="GitHub"
-              className="links__link-img"
-            />
-            Client
-          </a>
-          <a
-            href={selectedProjectDetails[0].github.server_link}
-            className="links__btn"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="/images/icons/github.png"
-              alt="GitHub"
-              className="links__link-img"
-            />
-            Server
-          </a>
+          {selectedProjectDetails[0].github.general === "no-link" && (
+            <>
+              <a
+                href={selectedProjectDetails[0].github.client_link}
+                className="links__btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="/images/icons/github.png"
+                  alt="GitHub"
+                  className="links__link-img"
+                />
+                Client
+              </a>
+              <a
+                href={selectedProjectDetails[0].github.server_link}
+                className="links__btn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="/images/icons/github.png"
+                  alt="GitHub"
+                  className="links__link-img"
+                />
+                Server
+              </a>
+            </>
+          )}
+
+          {selectedProjectDetails[0].github.general !== "no-link" && (
+            <>
+              <a
+                href={selectedProjectDetails[0].github.general}
+                className="links__btn links__btn--general"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  src="/images/icons/github.png"
+                  alt="GitHub"
+                  className="links__link-img"
+                />
+                Repository
+              </a>
+            </>
+          )}
         </div>
         <a
           href={selectedProjectDetails[0].address}
