@@ -67,7 +67,7 @@ const ContactWindow = ({ handleOpenWindow, handleCloseWindow }) => {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:5173"
+              value="http://janoskocs.com"
             ></input>
             <fieldset className="form__fieldset">
               <legend className="form__legend">Send me a message</legend>

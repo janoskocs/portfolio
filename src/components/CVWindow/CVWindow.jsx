@@ -58,7 +58,7 @@ const CVWindow = ({ handleCloseWindow }) => {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:5173"
+              value="https://janoskocs.com"
             ></input>
             <input type="hidden" name="_subject" value="CV Download"></input>
             <button className="cv-form__submit" type="submit">
