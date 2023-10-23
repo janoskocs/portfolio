@@ -28,7 +28,7 @@ const Taskbar = ({
           active={true}
           window={window}
           setActiveWindow={setActiveWindow}
-          shrink={windows.length > 2 ? "task--shrink" : ""}
+          shrink={windows.length > 3 ? "task--shrink" : ""}
         />
       );
     } else {

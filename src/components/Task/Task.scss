@@ -10,7 +10,7 @@
   margin-right: $tiny * 2;
 
   &--shrink {
-    width: $medium * 2;
+    width: $medium * 2.5;
 
     @include mobile-large {
       width: auto;
