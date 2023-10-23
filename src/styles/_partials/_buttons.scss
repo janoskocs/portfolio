@@ -4,6 +4,7 @@
 @mixin button {
   all: unset;
   background-color: $base;
+  cursor: pointer;
   box-shadow: inset -1px -1px $shadow-dark, inset 1px 1px $shadow-light,
     inset -2px -2px $shadow-mid, inset 2px 2px $shadow-mid-light;
   text-shadow: 0 0 $text-shadow-dark;
