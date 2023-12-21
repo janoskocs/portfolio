@@ -12,6 +12,12 @@
     width: 85%;
   }
 
+  &__text {
+    &--disclaimer {
+      font-size: $small;
+    }
+  }
+
   &__highlight {
     font-weight: bold;
     font-style: italic;
