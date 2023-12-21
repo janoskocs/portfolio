@@ -112,6 +112,7 @@ const ContactWindow = ({ handleOpenWindow, handleCloseWindow }) => {
               </button>
             </fieldset>
           </form>
+          
         </section>
       </section>
       <div className="window__body">

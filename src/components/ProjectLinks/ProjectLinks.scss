@@ -33,7 +33,7 @@
       pointer-events: none;
     }
     &--general {
-      @include flex(null, center);
+      @include flex(null, center, center);
     }
   }
 
