@@ -1,12 +1,14 @@
-FROM node:18-alpine3.17 as build
-WORKDIR /app
-COPY . /app
-RUN npm install
-RUN npm run build
+FROM node:18-slim
 
-FROM ubuntu
-RUN apt-get update
-RUN apt-get install nginx -y
-COPY --from=build /app/dist /var/www/html/
-EXPOSE 80
-CMD ["nginx","-g","daemon off;"]
+WORKDIR /usr/src/app
+
+COPY ./package.json .
+COPY ./package-lock.json .
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev-exposed"]
