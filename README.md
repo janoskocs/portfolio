@@ -25,4 +25,6 @@ This is version 3; I completely rebuilt it from the ground up using React and Sa
 
 ## Contact
 
+Let's work together!
+
 János Kócs - janos.kocs@outlook.com
