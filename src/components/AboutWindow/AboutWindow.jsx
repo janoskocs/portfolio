@@ -39,7 +39,7 @@ const AboutWindow = ({ handleOpenWindow, handleCloseWindow }) => {
           />
           <div className="about__side">
             <h3 className="about__title">
-              János Kócs | Software Engineer v3.0b
+              János Kócs | Software Engineer v3.0.1b
             </h3>
             <DividerLine orientation="horizontal" />
             <p className="about__text">
