@@ -52,4 +52,4 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.AWS_EC2_INSTANCE }} 'sudo docker rm portfolio || true'
       - name: Run new container
         run: |
-          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.AWS_EC2_INSTANCE }} 'sudo docker run -d --name portfolio -p 80:5173 janoskocs/portfolio:latest'
+          ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@${{ secrets.AWS_EC2_INSTANCE }} 'sudo docker run -d --name portfolio -p 80:80 janoskocs/portfolio:latest'
