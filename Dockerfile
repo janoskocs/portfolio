@@ -1,14 +1,18 @@
-FROM node:18-slim
-
-WORKDIR /usr/src/app
-
-COPY ./package.json .
-COPY ./package-lock.json .
-
+#Build app
+FROM node:alpine3.18 as build
+WORKDIR /app
+COPY package.json .
 RUN npm install
-
 COPY . .
+RUN npm run build
 
-EXPOSE 5173
-
-CMD ["npm", "run", "dev-exposed"]
+#Serve files with Nginx
+FROM nginx:1.23-alpine
+#Default nginx workdir
+WORKDIR /usr/share/nginx/html
+#Remove default nginx files
+RUN rm -rf *
+#Copy production version
+COPY --from=build /app/dist .
+EXPOSE 80
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
