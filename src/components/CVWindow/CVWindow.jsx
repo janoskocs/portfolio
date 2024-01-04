@@ -36,7 +36,7 @@ const CVWindow = ({ handleCloseWindow }) => {
         </p>
         <p className="cv__text">
           Please note this was updated on the
-          <span className="cv__highlight"> 3rd of January, 2024</span>.
+          <span className="cv__highlight"> 4th of January, 2024</span>.
         </p>
         <p className="cv__text cv__text--disclaimer">
           Your email address will not be retained, sold, or utilised for unwanted marketing communications. This notification indicates the download of my CV via email, and as part of my commitment to privacy, this data will be deleted within 30 days. Thank you for your understanding.
