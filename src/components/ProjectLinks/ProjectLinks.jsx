@@ -1,8 +1,11 @@
 import "./ProjectLinks.scss";
 import projectDetailImage from "/images/icons/projects.png";
 
-const ProjectLinks = ({ selectedProject, selectedProjectDetails }) => {
-  console.log(selectedProjectDetails);
+const ProjectLinks = ({
+  selectedProject,
+  selectedProjectDetails,
+  handleOpenWindow,
+}) => {
   if (selectedProject === "") {
     return (
       <section className="links">
@@ -96,7 +99,10 @@ const ProjectLinks = ({ selectedProject, selectedProjectDetails }) => {
             </>
           )}
         </div>
-        <button className="links__live">
+        <button
+          className="links__live"
+          onClick={(e) => handleOpenWindow(selectedProjectDetails[0].name)}
+        >
           <img
             src={projectDetailImage}
             className="links__link-img"

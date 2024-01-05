@@ -78,6 +78,7 @@ const ProjectsWindow = ({ handleOpenWindow, handleCloseWindow }) => {
 
           <section className="icons">{icons}</section>
           <ProjectLinks
+            handleOpenWindow={handleOpenWindow}
             selectedProject={selectedProject}
             selectedProjectDetails={selectedProjectDetails}
           />

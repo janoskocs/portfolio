@@ -2,8 +2,6 @@ import DividerLine from "../DividerLine";
 import "./ProjectView.scss";
 
 const ProjectView = ({ selectedProjectDetails }) => {
-  console.log(selectedProjectDetails);
-
   if (selectedProjectDetails) {
     return (
       <section className="view">
