@@ -32,6 +32,11 @@ const Desktop = ({ handleOpenWindow, handleCloseWindow, activeWindow }) => {
             );
           case "my-CV":
             return <CVWindow handleCloseWindow={handleCloseWindow} />;
+
+          case "memovault":
+            return <CVWindow handleCloseWindow={handleCloseWindow} />;
+          case "sunset-restaurant":
+            return <CVWindow handleCloseWindow={handleCloseWindow} />;
           default:
             return " ";
         }
