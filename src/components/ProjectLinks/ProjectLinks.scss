@@ -25,8 +25,8 @@
   }
 
   &__btn {
-    width: 100%;
     @include flex(null, null, center);
+    width: 100%;
     &--disabled {
       color: $base-dark;
       text-shadow: 1px 1px 0 $light;
@@ -40,6 +40,9 @@
   &__link-img {
     width: $medium;
     margin-right: $small-half;
+    &--disabled {
+      filter: grayscale(1);
+    }
   }
 
   &__live {

@@ -1,4 +1,5 @@
 import "./ProjectLinks.scss";
+import projectDetailImage from "/images/icons/projects.png";
 
 const ProjectLinks = ({ selectedProject, selectedProjectDetails }) => {
   console.log(selectedProjectDetails);
@@ -25,7 +26,15 @@ const ProjectLinks = ({ selectedProject, selectedProjectDetails }) => {
               Server
             </a>
           </div>
-          <a href="" className="links__live links__btn--disabled">
+          <button className="links__live links__btn--disabled">
+            <img
+              src={projectDetailImage}
+              className="links__link-img links__link-img--disabled"
+              alt="Learn more about the project"
+            />
+            Learn more about the project
+          </button>
+          <a href="#" className="links__live links__btn--disabled">
             <div className="links__live-pulse"></div>
             Live
           </a>
@@ -87,6 +96,14 @@ const ProjectLinks = ({ selectedProject, selectedProjectDetails }) => {
             </>
           )}
         </div>
+        <button className="links__live">
+          <img
+            src={projectDetailImage}
+            className="links__link-img"
+            alt="Learn more about the project"
+          />
+          Learn more about {selectedProjectDetails[0].title}
+        </button>
         <a
           href={selectedProjectDetails[0].address}
           className="links__live"

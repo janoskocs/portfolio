@@ -13,6 +13,7 @@ const ProjectView = ({ selectedProjectDetails }) => {
         <p className="view__description">
           {selectedProjectDetails[0].description}
         </p>
+
         <DividerLine orientation="horizontal" colour={true} />
       </section>
     );
