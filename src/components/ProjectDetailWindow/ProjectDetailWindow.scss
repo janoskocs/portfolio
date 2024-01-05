@@ -14,4 +14,8 @@
   background: linear-gradient(150deg, $cloud 10%, $light 50%);
   height: 29vh;
   padding: $small-half;
+
+  &__screenshot {
+    width: 30%;
+  }
 }

@@ -6,7 +6,14 @@ export const projects = [
     icon: "/images/icons/memovault.png",
     iconSelected: "/images/icons/memovault.png",
     iconAlt: "Cartoon style drawn shutter",
-    screenshots: [""],
+    screenshots: [
+      "memovault-dashboard.png",
+      "memovault-followers.png",
+      "memovault-friends-page.png",
+      "memovault-homepage.png",
+      "memovault-signup.png",
+      "memovault-upload.png",
+    ],
     type: "project",
     address: "https://memovault.herokuapp.com",
     github: {

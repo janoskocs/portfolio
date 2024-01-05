@@ -32,7 +32,16 @@ const ProjectDetailWindow = ({
       </div>
       <div className="window__body">
         <section className="project-detail">
-          <section className="gallery">images</section>
+          <section className="gallery">
+            {selectedProject.screenshots.map((image) => {
+              return (
+                <img
+                  className="gallery__screenshot"
+                  src={`/screenshots/${image}`}
+                />
+              );
+            })}
+          </section>
           <section className="tech-details">
             <p>
               {selectedProject.techstack.map((tech) => {
