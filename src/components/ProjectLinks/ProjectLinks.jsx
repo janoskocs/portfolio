@@ -1,5 +1,5 @@
 import "./ProjectLinks.scss";
-import projectDetailImage from "/images/icons/projects.png";
+import learnMoreBtnImage from "/images/icons/projects.png";
 
 const ProjectLinks = ({
   selectedProject,
@@ -31,7 +31,7 @@ const ProjectLinks = ({
           </div>
           <button className="links__live links__btn--disabled">
             <img
-              src={projectDetailImage}
+              src={learnMoreBtnImage}
               className="links__link-img links__link-img--disabled"
               alt="Learn more about the project"
             />
@@ -104,7 +104,7 @@ const ProjectLinks = ({
           onClick={(e) => handleOpenWindow(selectedProjectDetails[0].name)}
         >
           <img
-            src={projectDetailImage}
+            src={learnMoreBtnImage}
             className="links__link-img"
             alt="Learn more about the project"
           />

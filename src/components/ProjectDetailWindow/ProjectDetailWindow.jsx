@@ -1,6 +1,8 @@
 import "./ProjectDetailWindow.scss";
 import { projects } from "../../data/projects";
 import DividerLine from "../DividerLine";
+import learnMoreBtnImage from "/images/icons/projects.png";
+
 const ProjectDetailWindow = ({
   activeProject,
   handleCloseWindow,
@@ -29,9 +31,23 @@ const ProjectDetailWindow = ({
         </button>
       </div>
       <div className="window__body">
-        {/* <section className="about">
-
-        </section> */}
+        <section className="project-detail">
+          <section className="gallery">images</section>
+          <section className="tech-details">
+            <p>
+              {selectedProject.techstack.map((tech) => {
+                return tech;
+              })}
+            </p>
+            {selectedProject.libraries.map((library) => {
+              return library;
+            })}
+          </section>
+          <section className="project-info">
+            {selectedProject.published_at}
+            {selectedProject.description}
+          </section>
+        </section>
 
         <div className="window__control-btns">
           <DividerLine orientation="horizontal" />
