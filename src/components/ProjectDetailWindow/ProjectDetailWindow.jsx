@@ -11,7 +11,6 @@ const ProjectDetailWindow = ({
   const selectedProject = projects.find(
     (project) => project.name === activeProject
   );
-  console.log(selectedProject);
 
   return (
     <div className="window">
@@ -26,7 +25,7 @@ const ProjectDetailWindow = ({
         </div>
         <button
           className="window__button-close"
-          onClick={() => handleCloseWindow("about-me")}
+          onClick={() => handleCloseWindow(selectedProject.name)}
         >
           X
         </button>
@@ -37,20 +36,28 @@ const ProjectDetailWindow = ({
             <ImageSlideShow images={selectedProject.screenshots} />
           </div>
           <section className="tech-details">
-            <ul className="tech-details__list">
-              Tech stack:{" "}
-              {selectedProject.techstack.map((tech) => {
-                return <li className="tech-details__item">{tech}</li>;
-              })}
-            </ul>
-
-            {selectedProject.libraries.map((library) => {
-              return library;
-            })}
+            <div className="tech-details__container">
+              <h3 className="tech-details__title">Tech stack: </h3>
+              <ul className="tech-details__list">
+                {selectedProject.techstack.map((tech) => {
+                  return <li className="tech-details__item">{tech}</li>;
+                })}
+              </ul>
+            </div>
+            <div className="tech-details__container">
+              <h3 className="tech-details__title">Libraries: </h3>
+              <ul className="tech-details__list">
+                {selectedProject.libraries.map((library) => {
+                  return <li className="tech-details__item">{library}</li>;
+                })}
+              </ul>
+            </div>
           </section>
           <section className="project-info">
-            {selectedProject.published_at}
-            {selectedProject.description}
+            <p className="project-info__text">
+              Published: {selectedProject.published_at}
+            </p>
+            <p className="project-info__text">{selectedProject.description}</p>
           </section>
         </section>
 
@@ -65,7 +72,7 @@ const ProjectDetailWindow = ({
           </button>
           <button
             className="window__close-btn"
-            onClick={() => handleCloseWindow("about-me")}
+            onClick={() => handleCloseWindow(selectedProject.name)}
           >
             Close
           </button>

@@ -14,3 +14,36 @@
   background: linear-gradient(150deg, $cloud 30%, $light 80%);
   padding: $small-half;
 }
+
+.tech-details {
+  &__list {
+    display: inline;
+    padding: 0;
+    list-style-type: none;
+    @include gui_box_inset;
+    background-color: $light;
+  }
+  &__item {
+    display: inline;
+    margin-right: $small-half;
+    &:first-child {
+      margin-left: $small-half;
+    }
+    &::after {
+      content: ",";
+    }
+    &:last-child::after {
+      content: "";
+    }
+  }
+
+  &__title {
+    display: inline;
+  }
+}
+
+.project-info {
+  &__text {
+    margin-bottom: 0;
+  }
+}
