@@ -1,7 +1,7 @@
 import "./ProjectDetailWindow.scss";
 import { projects } from "../../data/projects";
 import DividerLine from "../DividerLine";
-import learnMoreBtnImage from "/images/icons/projects.png";
+import ImageSlideShow from "../ImageSlideShow";
 
 const ProjectDetailWindow = ({
   activeProject,
@@ -12,6 +12,7 @@ const ProjectDetailWindow = ({
     (project) => project.name === activeProject
   );
   console.log(selectedProject);
+
   return (
     <div className="window">
       <div className="window__title-bar">
@@ -32,16 +33,9 @@ const ProjectDetailWindow = ({
       </div>
       <div className="window__body">
         <section className="project-detail">
-          <section className="gallery">
-            {selectedProject.screenshots.map((image) => {
-              return (
-                <img
-                  className="gallery__screenshot"
-                  src={`/screenshots/${image}`}
-                />
-              );
-            })}
-          </section>
+          <div className="slide-container">
+            <ImageSlideShow images={selectedProject.screenshots} />
+          </div>
           <section className="tech-details">
             <p>
               {selectedProject.techstack.map((tech) => {
