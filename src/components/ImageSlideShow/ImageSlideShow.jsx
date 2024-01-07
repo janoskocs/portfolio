@@ -14,13 +14,16 @@ const ImageSlideShow = ({ images }) => {
 
   useEffect(() => {
     resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
+
+    if (images.length !== 0) {
+      timeoutRef.current = setTimeout(
+        () =>
+          setIndex((prevIndex) =>
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+          ),
+        delay
+      );
+    }
 
     return () => {
       resetTimeout();
@@ -33,13 +36,19 @@ const ImageSlideShow = ({ images }) => {
         className="slideshow__slider"
         style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
       >
-        {images.map((image, index) => (
-          <img
-            src={`screenshots/${image}`}
-            className="slideshow__slide"
-            key={index}
-          />
-        ))}
+        {images.length >= 1 ? (
+          images.map((image, index) => (
+            <img
+              src={`screenshots/${image}`}
+              className="slideshow__slide"
+              key={index}
+            />
+          ))
+        ) : (
+          <p className="slideshow__error">
+            No screenshots are available for this project.
+          </p>
+        )}
       </div>
 
       <div className="slideshow__controls">

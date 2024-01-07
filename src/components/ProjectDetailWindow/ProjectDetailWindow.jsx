@@ -37,11 +37,13 @@ const ProjectDetailWindow = ({
             <ImageSlideShow images={selectedProject.screenshots} />
           </div>
           <section className="tech-details">
-            <p>
+            <ul className="tech-details__list">
+              Tech stack:{" "}
               {selectedProject.techstack.map((tech) => {
-                return tech;
+                return <li className="tech-details__item">{tech}</li>;
               })}
-            </p>
+            </ul>
+
             {selectedProject.libraries.map((library) => {
               return library;
             })}

@@ -34,7 +34,7 @@ export const projects = [
     icon: "/images/icons/sunset-restaurant.png",
     iconSelected: "/images/icons/sunset-restaurant.png",
     iconAlt: "Palm trees in front of triangle shapes",
-    screenshots: [""],
+    screenshots: [],
     type: "project",
     address: "https://sunset-restaurant.herokuapp.com/",
     github: {
