@@ -5,14 +5,24 @@
 @use "../../styles/_partials/buttons" as *;
 @use "../../styles/_partials/variables" as *;
 
-.project-detail {
-  width: 100%;
-}
-.slide-container {
+.explorer {
   @include gui_box_inset;
   background-color: $light;
-  background: linear-gradient(150deg, $cloud 30%, $light 80%);
+  background: linear-gradient(150deg, $cloud 10%, $light 50%);
   padding: $small-half;
+
+  &__container {
+    @include flex(null, null, center);
+    margin-bottom: $small;
+  }
+  &__image {
+    width: $large;
+    margin-right: $small;
+  }
+  &__title {
+    font-size: 1.6rem;
+    margin: 0;
+  }
 }
 
 .tech-details {
@@ -25,16 +35,6 @@
   }
   &__item {
     display: inline;
-    margin-right: $small-half;
-    &:first-child {
-      margin-left: $small-half;
-    }
-    &::after {
-      content: ",";
-    }
-    &:last-child::after {
-      content: "";
-    }
   }
 
   &__title {

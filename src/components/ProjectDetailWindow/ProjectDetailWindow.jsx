@@ -32,32 +32,38 @@ const ProjectDetailWindow = ({
       </div>
       <div className="window__body">
         <section className="project-detail">
-          <div className="slide-container">
+          <div className="explorer">
+            <div className="explorer__container">
+              <img
+                className="explorer__image"
+                src={selectedProject.icon}
+                alt={selectedProject.iconAlt}
+              />
+              <h3 className="explorer__title">
+                C:\Projects\{selectedProject.title}
+              </h3>
+            </div>
+
+            <section className="tech-details">
+              <div className="tech-details__container">
+                <ul className="tech-details__list">
+                  {selectedProject.techstack.map((tech) => {
+                    return <li className="tech-details__item">{tech}</li>;
+                  })}
+                </ul>
+              </div>
+            </section>
+            <DividerLine orientation="horizontal" colour={true} />
+            <p className="explorer__text">
+              Published: {selectedProject.published_at}
+            </p>
             <ImageSlideShow images={selectedProject.screenshots} />
           </div>
-          <section className="tech-details">
-            <div className="tech-details__container">
-              <h3 className="tech-details__title">Tech stack: </h3>
-              <ul className="tech-details__list">
-                {selectedProject.techstack.map((tech) => {
-                  return <li className="tech-details__item">{tech}</li>;
-                })}
-              </ul>
-            </div>
-            <div className="tech-details__container">
-              <h3 className="tech-details__title">Libraries: </h3>
-              <ul className="tech-details__list">
-                {selectedProject.libraries.map((library) => {
-                  return <li className="tech-details__item">{library}</li>;
-                })}
-              </ul>
-            </div>
-          </section>
+
           <section className="project-info">
             <p className="project-info__text">
               Published: {selectedProject.published_at}
             </p>
-            <p className="project-info__text">{selectedProject.description}</p>
           </section>
         </section>
 
