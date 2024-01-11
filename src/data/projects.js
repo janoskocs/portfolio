@@ -22,7 +22,7 @@ export const projects = [
       general: "no-link",
     },
     published_at: "14/04/2023",
-    techstack: ["JavaScript", "React", "Express", "Node", "MongoDB"],
+    techstack: ["js", "react", "express", "node", "mongodb"],
     libraries: ["Recharts", "Mongoose", "paperCSS", "sentiment analysis API"],
     description:
       "MemoVault is a social media app where users can upload moments and the app detects and keeps track of emotions. User can reflect, connect with friends and appreciate other people's moments.",

@@ -48,7 +48,14 @@ const ProjectDetailWindow = ({
               <div className="tech-details__container">
                 <ul className="tech-details__list">
                   {selectedProject.techstack.map((tech) => {
-                    return <li className="tech-details__item">{tech}</li>;
+                    return (
+                      <li className="tech-details__item">
+                        <img
+                          className="tech-details__image"
+                          src={`/images/skills/${tech}.png`}
+                        />
+                      </li>
+                    );
                   })}
                 </ul>
               </div>

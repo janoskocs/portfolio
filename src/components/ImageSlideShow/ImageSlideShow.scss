@@ -15,30 +15,20 @@
 
   &__controls {
     text-align: center;
-    // background-color: $base;
   }
 
   &__dot {
     display: inline-block;
     height: $medium;
     width: $medium;
-    // border-radius: 50%;
-
     background: $light;
-    // box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
-    //   inset -2px -2px grey, inset 2px 2px #dfdfdf;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
       inset -2px -2px grey, inset 2px 2px #dfdfdf;
     cursor: pointer;
-
-    // margin: 15px 7px 0px;
     margin: $small-half $small-half 0;
 
-    // background-color: $base;
     &--active {
       background-color: $accent-color;
     }
-  }
-  &__error {
   }
 }
