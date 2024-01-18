@@ -25,7 +25,7 @@
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff,
       inset -2px -2px grey, inset 2px 2px #dfdfdf;
     cursor: pointer;
-    margin: $small-half $small-half 0;
+    margin: 0 $small-half;
 
     &--active {
       background-color: $accent-color;

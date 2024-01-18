@@ -60,18 +60,19 @@ const ProjectDetailWindow = ({
                 </ul>
               </div>
             </section>
-            <DividerLine orientation="horizontal" colour={true} />
-            <p className="explorer__text">
+            {/* <DividerLine orientation="horizontal" colour={true} /> */}
+            {/* <p className="explorer__text">
               Published: {selectedProject.published_at}
-            </p>
+            </p> */}
+            <p className="explorer__text">{selectedProject.long_description}</p>
             <ImageSlideShow images={selectedProject.screenshots} />
           </div>
 
-          <section className="project-info">
+          {/* <section className="project-info">
             <p className="project-info__text">
-              Published: {selectedProject.published_at}
+              {selectedProject.long_description}
             </p>
-          </section>
+          </section> */}
         </section>
 
         <div className="window__control-btns">

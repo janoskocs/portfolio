@@ -8,7 +8,7 @@
 .explorer {
   @include gui_box_inset;
   background-color: $light;
-  background: linear-gradient(150deg, $cloud 10%, $light 50%);
+  background: linear-gradient(170deg, $cloud 10%, $light 30%);
   padding: $small-half;
   width: 100%;
 
@@ -21,6 +21,9 @@
     margin-right: $small;
   }
   &__title {
+    @include gui_box_inset;
+    background-color: $light;
+    padding: $small;
     font-size: 1.6rem;
     margin: 0;
   }
