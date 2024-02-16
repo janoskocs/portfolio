@@ -53,4 +53,13 @@ export const menuItems = [
     type: "link",
     address: "https://github.com/janoskocs",
   },
+  {
+    id: 7,
+    name: "My Blog",
+    alt: "My Blog",
+    icon: "/images/icons/myblog.png",
+    action: "no-action",
+    type: "link",
+    address: "https://dev.to/janoskocs",
+  },
 ];
