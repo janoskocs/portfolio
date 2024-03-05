@@ -36,7 +36,7 @@ export const projects = [
     icon: "/images/icons/sunset-restaurant.png",
     iconSelected: "/images/icons/sunset-restaurant.png",
     iconAlt: "Palm trees in front of triangle shapes",
-    screenshots: [],
+    screenshots: ["sunset-landing-page.png", "sunset-error-state.png", "sunset-preorder.png"],
     type: "project",
     address: "https://sunset-restaurant.herokuapp.com/",
     github: {
@@ -45,10 +45,10 @@ export const projects = [
       general: "https://github.com/janoskocs/sunset-web-app/",
     },
     published_at: "14/04/2023",
-    techstack: ["js", "ejs", "express", "node", "mongodb"],
+    techstack: ["js", "express", "node", "mongodb"],
     libraries: [""],
     description:
       "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
-    long_description: "test",
+    long_description: "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
   },
 ];
