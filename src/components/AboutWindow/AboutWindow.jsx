@@ -1,6 +1,7 @@
 import DividerLine from "../DividerLine";
 import "./AboutWindow.scss";
 import { skills } from "src/data/skills";
+import { version } from "src/data/version";
 
 const AboutWindow = ({ handleOpenWindow, handleCloseWindow }) => {
   const skillsJSX = skills.map((skill) => {
@@ -39,7 +40,7 @@ const AboutWindow = ({ handleOpenWindow, handleCloseWindow }) => {
           />
           <div className="about__side">
             <h3 className="about__title">
-              János Kócs | Software Engineer v3.0.2
+              János Kócs | Software Engineer {version}
             </h3>
             <DividerLine orientation="horizontal" />
             <p className="about__text">
