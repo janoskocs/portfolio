@@ -50,6 +50,14 @@ const Desktop = ({ handleOpenWindow, handleCloseWindow, activeWindow }) => {
                 handleOpenWindow={handleOpenWindow}
               />
             );
+          case "inviami":
+            return (
+              <ProjectDetailWindow
+                activeProject="inviami"
+                handleCloseWindow={handleCloseWindow}
+                handleOpenWindow={handleOpenWindow}
+              />
+            );
           default:
             return " ";
         }
