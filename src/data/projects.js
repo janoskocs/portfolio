@@ -36,7 +36,11 @@ export const projects = [
     icon: "/images/icons/sunset-restaurant.png",
     iconSelected: "/images/icons/sunset-restaurant.png",
     iconAlt: "Palm trees in front of triangle shapes",
-    screenshots: ["sunset-landing-page.png", "sunset-error-state.png", "sunset-preorder.png"],
+    screenshots: [
+      "sunset-landing-page.png",
+      "sunset-error-state.png",
+      "sunset-preorder.png",
+    ],
     type: "project",
     address: "https://sunset-restaurant.herokuapp.com/",
     github: {
@@ -49,6 +53,30 @@ export const projects = [
     libraries: [""],
     description:
       "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
-    long_description: "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
+    long_description:
+      "Sunset Restaurant is an interactive web app that aims to simplify table booking in restaurants.",
+  },
+  {
+    id: "p3",
+    title: "Inviami",
+    name: "inviami",
+    icon: "/images/icons/inviami.png",
+    iconSelected: "/images/icons/inviami.png",
+    iconAlt: "Inviami post stamp icon.",
+    screenshots: ["inviami-homepage.png", "inviami-invitation.png"],
+    type: "project",
+    address: "https://inviami.com",
+    github: {
+      client_link: "no-link",
+      server_link: "no-link",
+      general: "no-link",
+    },
+    published_at: "18/04/2024",
+    techstack: ["js", "express", "node", "mongodb"],
+    libraries: [""],
+    description:
+      "Inviami is an interactive web app that creates digital invitation cards.",
+    long_description:
+      "Inviami is an interactive web app that creates digital invitation cards.",
   },
 ];
