@@ -69,7 +69,7 @@ export const projects = [
     github: {
       client_link: "no-link",
       server_link: "no-link",
-      general: "no-link",
+      general: "https://github.com/janoskocs/inviami-front-end",
     },
     published_at: "18/04/2024",
     techstack: ["js", "express", "node", "mongodb"],
