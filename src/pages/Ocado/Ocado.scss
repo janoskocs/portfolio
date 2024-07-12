@@ -1,0 +1,71 @@
+.ocado {
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center   ;
+  flex-direction: row;
+
+  &__list {
+    margin: 0;
+    list-style-type: none;
+  }
+  &__list-item {
+    display: inline;
+    margin-right: 1rem;
+  }
+  &__image {
+    width: 85px;
+  }
+}
+.section {
+  min-height: 85vh;
+}
+.intro {
+  background: url(/images/ocado/pepper.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 0;
+}
+
+.question-1 {
+  background: url(/images/ocado/mission.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 0;
+}
+
+.question-2 {
+  background: url(/images/ocado/clementine.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 0;
+}
+
+.question-3 {
+  background: url(/images/ocado/spring-onion.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 0;
+}
+
+.question-4 {
+  background: url(/images/ocado/cherry.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 0;
+}
+
+.end {
+  background: url(/images/ocado/berries.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 60% 0;
+}
