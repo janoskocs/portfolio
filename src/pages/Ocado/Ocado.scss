@@ -10,7 +10,7 @@ html {
   position: sticky;
   top: 0;
   background-color: white;
-  padding: 1rem;
+  z-index: 100;
   // margin-bottom: 15vh;
 
   &__container {
@@ -43,7 +43,7 @@ html {
     }
   }
   &__image {
-    width: 85px;
+    width: 8rem;
   }
 }
 .section {
@@ -55,9 +55,11 @@ html {
   &__container {
     width: 80%;
     margin: 0 auto;
+    position: relative;
   }
 
   &__title {
+
     font-size: 6rem;
     font-weight: 400;
     margin: 0;
@@ -66,10 +68,24 @@ html {
     text-shadow: 1px 1px 0px #414446;
   }
   &__sub-title {
+    width: 60%;
     text-shadow: 1px 1px 0px #414446;
     font-size: 6rem;
     margin: 0;
     margin-left: 2rem;
+  }
+
+  &__description {
+    width: 60%;
+  }
+  &__image {
+    position: absolute;
+    right: 10%;
+    top: 10rem;
+    width: 25rem;
+    z-index: 1;
+    border-radius: 8px;
+    border: 2px solid #4d216d;
   }
 }
 .intro {
@@ -84,6 +100,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   background-position: 60% 0;
+  color: #fff;
 }
 
 .question-2 {

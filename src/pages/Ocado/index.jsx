@@ -55,7 +55,7 @@ const Ocado = () => {
             <p className="section__description">
               I am Janos, a JavaScript developer.
             </p>
-
+            <img className="section__image" src="/images/ocado/janos_debugging.jpg" alt="janos debugging his laptop"/>
             <p className="section__description">
               Thank you so much for giving me the opportunity to take this test.
             </p>
@@ -63,13 +63,18 @@ const Ocado = () => {
               The goal for this landing page is to demonstrate my skills in and
               the way I approach problem solving.
             </p>
-            <ul className="section__list">
-              <li className="section__list-item"></li>
-            </ul>
           </div>
         </section>
         <section className="section question-1" id="question1">
-          <div className="section__container"></div>
+          <div className="section__container">
+          <h2 className="section__title">Question 1</h2>
+            <h3 className="section__sub-title">url </h3>
+            <p className="section__description">
+              Statement
+            </p>
+         
+          
+          </div>
         </section>
         <section className="section question-2" id="question2">
           <div className="section__container"></div>
