@@ -1,3 +1,5 @@
+import { Accordion, AccordionItem } from "@szhsin/react-accordion";
+
 import "./Ocado.scss";
 
 const Ocado = () => {
@@ -55,7 +57,11 @@ const Ocado = () => {
             <p className="section__description">
               I am Janos, a JavaScript developer.
             </p>
-            <img className="section__image" src="/images/ocado/janos_debugging.jpg" alt="janos debugging his laptop"/>
+            <img
+              className="section__image"
+              src="/images/ocado/janos_debugging.jpg"
+              alt="janos debugging his laptop"
+            />
             <p className="section__description">
               Thank you so much for giving me the opportunity to take this test.
             </p>
@@ -67,13 +73,48 @@ const Ocado = () => {
         </section>
         <section className="section question-1" id="question1">
           <div className="section__container">
-          <h2 className="section__title">Question 1</h2>
+            <h2 className="section__title">Question 1</h2>
             <h3 className="section__sub-title">url </h3>
-            <p className="section__description">
-              Statement
-            </p>
-         
-          
+            <p className="section__description">Statement</p>
+
+            <Accordion transition transitionTimeout={250}>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Analyis</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Solution</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Challenges</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Improvements</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
         <section className="section question-2" id="question2">
