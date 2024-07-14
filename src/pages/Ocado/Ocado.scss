@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .ocado {
   position: relative;
   height: 100%;
@@ -8,10 +11,16 @@
   top: 0;
   background-color: white;
   padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center   ;
-  flex-direction: row;
+  // margin-bottom: 15vh;
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 
   &__list {
     margin: 0;
@@ -21,12 +30,47 @@
     display: inline;
     margin-right: 1rem;
   }
+  &__link {
+    text-decoration: none;
+    color: #414446;
+    font-size: 1.8rem;
+    margin: 1rem;
+    font-weight: 400;
+
+    &:hover {
+      color: #000;
+      text-shadow: 1px 1px 1px #414446;
+    }
+  }
   &__image {
     width: 85px;
   }
 }
 .section {
+  // padding-top: 12rem; /* Adjust this value based on the height of your nav */
+  // margin-top: -12rem; /* Adjust this value based on the height of your nav */
   min-height: 85vh;
+  color: #414446;
+  font-family: "Helvetica Neue", sans-serif;
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 400;
+    margin: 0;
+    padding-top: 3rem;
+    // box-shadow: 1px 1px 5px #414446;
+    text-shadow: 1px 1px 0px #414446;
+  }
+  &__sub-title {
+    text-shadow: 1px 1px 0px #414446;
+    font-size: 6rem;
+    margin: 0;
+    margin-left: 2rem;
+  }
 }
 .intro {
   background: url(/images/ocado/pepper.jpg) no-repeat;
