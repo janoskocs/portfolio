@@ -49,7 +49,7 @@ const Ocado = () => {
           </ul>
         </div>
       </nav>
-      <main>
+      <main className="main">
         <section className="section intro" id="intro">
           <div className="section__container">
             <h2 className="section__title">Hello :{")"}</h2>
@@ -118,13 +118,142 @@ const Ocado = () => {
           </div>
         </section>
         <section className="section question-2" id="question2">
-          <div className="section__container"></div>
+          <div className="section__container">
+            <h2 className="section__title">Question 1</h2>
+            <h3 className="section__sub-title">url </h3>
+            <p className="section__description">Statement</p>
+
+            <Accordion transition transitionTimeout={250}>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Analyis</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Solution</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Challenges</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Improvements</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </section>
         <section className="section question-3" id="question3">
-          <div className="section__container"></div>
+          <div className="section__container">
+            <h2 className="section__title">Question 1</h2>
+            <h3 className="section__sub-title">url </h3>
+            <p className="section__description">Statement</p>
+
+            <Accordion transition transitionTimeout={250}>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Analyis</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Solution</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Challenges</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Improvements</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </section>
         <section className="section question-4" id="question4">
-          <div className="section__container"></div>
+          <div className="section__container">
+            <h2 className="section__title">Question 1</h2>
+            <h3 className="section__sub-title">url </h3>
+            <p className="section__description">Statement</p>
+
+            <Accordion transition transitionTimeout={250}>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Analyis</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Solution</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Challenges</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+              <AccordionItem
+                header={
+                  <div className="accordion">
+                    <p className="accordion__title">Improvements</p>
+                  </div>
+                }
+              >
+                <p className="accordion__description">stuff here</p>
+              </AccordionItem>
+            </Accordion>
+          </div>
         </section>
         <section className="section end" id="end">
           <div className="section__container"></div>
