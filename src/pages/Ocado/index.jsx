@@ -10,7 +10,7 @@ mainContent.style.width = "100%";`;
     <div className="ocado">
       <nav className="nav">
         <div className="nav__container">
-          <a className="nav__link nav__link--logo" href="janoskocs.com">
+          <a className="nav__link nav__link--logo" href="https://janoskocs.com">
             <img
               className="nav__image"
               src="/images/ocado/logo.png"
@@ -165,8 +165,11 @@ mainContent.style.width = "100%";`;
         <section className="section question-2" id="question2">
           <div className="section__container">
             <h2 className="section__title">Question 2</h2>
-            <h3 className="section__sub-title">Create a simple form</h3>
-            <p className="section__description">Statement</p>
+            <h3 className="section__sub-title">Create a form</h3>
+            <p className="section__description">
+              A form that will display input values in a modal when the submit
+              button is clicked.
+            </p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
@@ -176,7 +179,27 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>
+                    Tech: HTML, Sass, JavaScript
+                    <ul>
+                      <li>
+                        Sass for styling, and compliments BEM naming convention
+                      </li>
+                      <li>
+                        Organise and create a modular folder structure to
+                        maintain codebase easier
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Create a wireframe</li>
+                  <img
+                    width="220"
+                    src="/images/ocado/wireframe.jpg"
+                    alt="wireframe"
+                  />
+                  <li>Download icon and van image</li>
+                </ul>
               </AccordionItem>
               <AccordionItem
                 header={
@@ -185,7 +208,9 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <p className="accordion__description">
+                  Please see the live demo
+                </p>
               </AccordionItem>
               <AccordionItem
                 header={
@@ -194,16 +219,40 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>
+                    Form validation; for example, ensure the phone number is a
+                    number
+                  </li>
+                  <li>User experience in providing helpful error messages</li>
+                  <li>User accesibilty of using semantic HTML</li>
+                  <li>
+                    Sanitise input and use of `textContent`, `innerText over
+                    `innerHTML`
+                  </li>
+                </ul>
               </AccordionItem>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Improvements</p>
+                    <p className="accordion__title">
+                      Improvements/Alternative solutions
+                    </p>
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>Review element selectors to reduce repetition</li>
+                  <CopyBlock
+                    text={`const $ = (selector) => document.querySelector(selector);
+const form = $(".form");`}
+                    language={"terminal"}
+                    showLineNumbers={true}
+                    wrapLines
+                  />
+                  <li>Modal related code could be moved into its own file</li>
+                  <li>Separate error handling logic into its own function</li>
+                </ul>
               </AccordionItem>
             </Accordion>
           </div>
@@ -386,28 +435,11 @@ mainContent.style.width = "100%";`;
         </section>
         <section className="section end" id="end">
           <div className="section__container">
-            {"///////////////            Hello there!"}
-            {
-              " /////////////////////         We are looking for the very best software engineers"
-            }
-            {
-              " ///////////            //       for our offices in Hatfield, UK and Krakow, Poland."
-            }
-            {"///////////     /////     ///     "}
-            {
-              "///////////    ///////     ///     If you fit the bill then check us out at www.ocadotechnology.com"
-            }
-            {"////////////    ///////////////      "}
-            {"////////////    /////////////////    "}
-            {"/////////////    ////////////// //    "}
-            {"//////////////    ////////// ////    "}
-            {"////////////////           /////     "}
-            {"////////////////////////////////     "}
-            {"//////////////////////////////      "}
-            {"////////////////////////////       "}
-            {"////////////////////////         "}
-            {"////////////////////           "}
-            {"///////////              "}
+            <h2 className="section__title">
+              Thank you so much for this opportunity!
+            </h2>
+
+            <h2 className="section__title">Questions?</h2>
           </div>
         </section>
       </main>
