@@ -1,8 +1,11 @@
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
-
+import { CopyBlock } from "react-code-blocks";
 import "./Ocado.scss";
 
 const Ocado = () => {
+  const removeSidebarCode = `const mainContent = document.getElementsByClassName("main-column")[0];
+mainContent.style.width = "100%";`;
+
   return (
     <div className="ocado">
       <nav className="nav">
@@ -74,18 +77,30 @@ const Ocado = () => {
         <section className="section question-1" id="question1">
           <div className="section__container">
             <h2 className="section__title">Question 1</h2>
-            <h3 className="section__sub-title">url </h3>
-            <p className="section__description">Statement</p>
+            <h3 className="section__sub-title">Remove sidebar</h3>
+            <p className="section__description">
+              Remove the sidebar on a specific URL
+            </p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Analyis</p>
+                    <p className="accordion__title">Analysis</p>
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <p className="accordion__description">
+                  <ul>
+                    <li>Create a function</li>
+                    <li>Check the URL in the browser</li>
+                    <li>Check if the URL matches the specific URL</li>
+                    <li>Remove the sidebar</li>
+                  </ul>
+                  {/* <p className="accordion__description">
+                    Focus on path only: <br></br> https://www.ocado.com/<b>browse/m-s-at-ocado-294578</b>?clkInTab=MandS%20at%20Ocado
+                  </p> */}
+                </p>
               </AccordionItem>
               <AccordionItem
                 header={
@@ -94,7 +109,9 @@ const Ocado = () => {
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <p className="accordion__description">
+                  Please see the live Demo.
+                </p>
               </AccordionItem>
               <AccordionItem
                 header={
@@ -103,31 +120,50 @@ const Ocado = () => {
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+              <ul>
+                <li>Main content&apos;s design breaks</li>
+                <li>Sidebar gap</li>
+              </ul>
+              <img width={512} src="/images/ocado/question1.png" alt="sidebar gap" />
+              <p>Solution to sidebar gap {"(deprecated)"}</p>
+                <CopyBlock
+                  text={removeSidebarCode}
+                  language={"javascript"}
+                  showLineNumbers={true}
+                  wrapLines
+                />
               </AccordionItem>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Improvements</p>
+                    <p className="accordion__title">Improvements/Alternative solutions</p>
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>Remove sidebar with CSS</li>
+                  <li>Free memory by setting sideBar to null <CopyBlock
+                  text={`sidebar = null;`}
+                  language={"javascript"}
+                  showLineNumbers={true}
+                  wrapLines
+                /></li>
+                </ul>
               </AccordionItem>
             </Accordion>
           </div>
         </section>
         <section className="section question-2" id="question2">
           <div className="section__container">
-            <h2 className="section__title">Question 1</h2>
-            <h3 className="section__sub-title">url </h3>
+            <h2 className="section__title">Question 2</h2>
+            <h3 className="section__sub-title">create a simple form</h3>
             <p className="section__description">Statement</p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Analyis</p>
+                    <p className="accordion__title">Analysis</p>
                   </div>
                 }
               >
@@ -165,15 +201,15 @@ const Ocado = () => {
         </section>
         <section className="section question-3" id="question3">
           <div className="section__container">
-            <h2 className="section__title">Question 1</h2>
-            <h3 className="section__sub-title">url </h3>
+            <h2 className="section__title">Question 3</h2>
+            <h3 className="section__sub-title">convert date function</h3>
             <p className="section__description">Statement</p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Analyis</p>
+                    <p className="accordion__title">Analysis</p>
                   </div>
                 }
               >
@@ -211,15 +247,15 @@ const Ocado = () => {
         </section>
         <section className="section question-4" id="question4">
           <div className="section__container">
-            <h2 className="section__title">Question 1</h2>
-            <h3 className="section__sub-title">url </h3>
+            <h2 className="section__title">Question 4</h2>
+            <h3 className="section__sub-title">customer marketing</h3>
             <p className="section__description">Statement</p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Analyis</p>
+                    <p className="accordion__title">Analysis</p>
                   </div>
                 }
               >
@@ -256,7 +292,25 @@ const Ocado = () => {
           </div>
         </section>
         <section className="section end" id="end">
-          <div className="section__container"></div>
+          <div className="section__container">
+
+        {  "///////////////            Hello there!"}
+        {" /////////////////////         We are looking for the very best software engineers"}
+      {" ///////////            //       for our offices in Hatfield, UK and Krakow, Poland."}
+     {"///////////     /////     ///     "}
+    {"///////////    ///////     ///     If you fit the bill then check us out at www.ocadotechnology.com"}
+   {"////////////    ///////////////      "}
+   {"////////////    /////////////////    "}
+  {"/////////////    ////////////// //    "}
+   {"//////////////    ////////// ////    "}
+   {"////////////////           /////     "}
+   {"////////////////////////////////     "}
+    {"//////////////////////////////      "}
+     {"////////////////////////////       "}
+       {"////////////////////////         "}
+         {"////////////////////           "}
+              {"///////////              "}
+          </div>
         </section>
       </main>
     </div>

@@ -48,14 +48,12 @@ html {
 }
 
 .main {
-  margin-top:15vh;
+  margin-top: 15vh;
 }
 
 .section {
-padding-top: 15vh;
-padding-bottom: 15vh;
-  // padding-top: 12rem; /* Adjust this value based on the height of your nav */
-  // margin-top: -12rem; /* Adjust this value based on the height of your nav */
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   min-height: 85vh;
   color: #414446;
   font-family: "Helvetica Neue", sans-serif;
@@ -140,7 +138,7 @@ padding-bottom: 15vh;
 .szh-accordion {
   background-color: transparent;
   border-radius: 8px;
-  width: 50%;
+  width: 70%;
   &__item {
     background-color: #fff;
     border-radius: 8px;
