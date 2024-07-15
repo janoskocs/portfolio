@@ -212,7 +212,9 @@ mainContent.style.width = "100%";`;
           <div className="section__container">
             <h2 className="section__title">Question 3</h2>
             <h3 className="section__sub-title">Convert date function</h3>
-            <p className="section__description">Statement</p>
+            <p className="section__description">
+              A function that takes a date object and {"=>"} DD MMM YYYY.
+            </p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
@@ -222,7 +224,11 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>Create function that takes in a date object</li>
+                  <li>Extract the hour, month, and year</li>
+                  <li>Build a new string with in the format of DD MMM YYYY</li>
+                </ul>
               </AccordionItem>
               <AccordionItem
                 header={
@@ -231,7 +237,22 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <p className="accordion__description">
+                  Please see the live demo.
+                </p>
+                <CopyBlock
+                  text={`node 03-question/03-question.js`}
+                  language={"terminal"}
+                  showLineNumbers={true}
+                  wrapLines
+                />
+                <p className="accordion__description">Alternative version</p>
+                <CopyBlock
+                  text={`node 03-question/03-question-alternative.js`}
+                  language={"terminal"}
+                  showLineNumbers={true}
+                  wrapLines
+                />
               </AccordionItem>
               <AccordionItem
                 header={
@@ -240,16 +261,51 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>
+                    Valid date input and validation
+                    <ul>
+                      <li>Use regular expression to test input argument</li>
+                      <li>
+                        <CopyBlock
+                          text="`/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/`"
+                          language="javascript"
+                        />
+                      </li>
+                    </ul>
+                    <li>Creating a list of Months</li>
+                    <li>
+                      Timezone issues
+                      <ul>
+                        <li>
+                          For example, 2024 Jul 15 may be converted to Jul 14 in
+                          Alaska, but it remains Jul 15 in East of Russia{" "}
+                        </li>
+                        <li>
+                          Create an alternative version to use `toISOString`
+                        </li>
+                        <li>Aim to use UTC as GMT changes into BST, or DST</li>
+                      </ul>
+                    </li>
+                  </li>
+                </ul>
               </AccordionItem>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Improvements</p>
+                    <p className="accordion__title">
+                      Improvements/Alternative solutions
+                    </p>
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>Use moment.js library</li>
+                  <li>
+                    Consider using `toLocaleDateString` in case timezones are
+                    not a concern
+                  </li>
+                </ul>
               </AccordionItem>
             </Accordion>
           </div>
@@ -312,7 +368,9 @@ mainContent.style.width = "100%";`;
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Improvements/Alternative</p>
+                    <p className="accordion__title">
+                      Improvements/Alternative solutions
+                    </p>
                   </div>
                 }
               >
