@@ -53,6 +53,7 @@ html {
 
 .section {
 padding-top: 15vh;
+padding-bottom: 15vh;
   // padding-top: 12rem; /* Adjust this value based on the height of your nav */
   // margin-top: -12rem; /* Adjust this value based on the height of your nav */
   min-height: 85vh;
@@ -137,10 +138,13 @@ padding-top: 15vh;
 }
 
 .szh-accordion {
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 8px;
   width: 50%;
   &__item {
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
     &-btn {
       border-radius: 8px;
       cursor: pointer;
