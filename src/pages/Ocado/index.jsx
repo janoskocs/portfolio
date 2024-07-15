@@ -120,12 +120,16 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-              <ul>
-                <li>Main content&apos;s design breaks</li>
-                <li>Sidebar gap</li>
-              </ul>
-              <img width={512} src="/images/ocado/question1.png" alt="sidebar gap" />
-              <p>Solution to sidebar gap {"(deprecated)"}</p>
+                <ul>
+                  <li>Main content&apos;s design breaks</li>
+                  <li>Sidebar gap</li>
+                </ul>
+                <img
+                  width={512}
+                  src="/images/ocado/question1.png"
+                  alt="sidebar gap"
+                />
+                <p>Solution to sidebar gap {"(deprecated)"}</p>
                 <CopyBlock
                   text={removeSidebarCode}
                   language={"javascript"}
@@ -136,18 +140,23 @@ mainContent.style.width = "100%";`;
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Improvements/Alternative solutions</p>
+                    <p className="accordion__title">
+                      Improvements/Alternative solutions
+                    </p>
                   </div>
                 }
               >
                 <ul>
                   <li>Remove sidebar with CSS</li>
-                  <li>Free memory by setting sideBar to null <CopyBlock
-                  text={`sidebar = null;`}
-                  language={"javascript"}
-                  showLineNumbers={true}
-                  wrapLines
-                /></li>
+                  <li>
+                    Free memory by setting sideBar to null{" "}
+                    <CopyBlock
+                      text={`sidebar = null;`}
+                      language={"javascript"}
+                      showLineNumbers={true}
+                      wrapLines
+                    />
+                  </li>
                 </ul>
               </AccordionItem>
             </Accordion>
@@ -156,7 +165,7 @@ mainContent.style.width = "100%";`;
         <section className="section question-2" id="question2">
           <div className="section__container">
             <h2 className="section__title">Question 2</h2>
-            <h3 className="section__sub-title">create a simple form</h3>
+            <h3 className="section__sub-title">Create a simple form</h3>
             <p className="section__description">Statement</p>
 
             <Accordion transition transitionTimeout={250}>
@@ -202,7 +211,7 @@ mainContent.style.width = "100%";`;
         <section className="section question-3" id="question3">
           <div className="section__container">
             <h2 className="section__title">Question 3</h2>
-            <h3 className="section__sub-title">convert date function</h3>
+            <h3 className="section__sub-title">Convert date function</h3>
             <p className="section__description">Statement</p>
 
             <Accordion transition transitionTimeout={250}>
@@ -248,7 +257,7 @@ mainContent.style.width = "100%";`;
         <section className="section question-4" id="question4">
           <div className="section__container">
             <h2 className="section__title">Question 4</h2>
-            <h3 className="section__sub-title">customer marketing</h3>
+            <h3 className="section__sub-title">Customer marketing</h3>
             <p className="section__description">Statement</p>
 
             <Accordion transition transitionTimeout={250}>
@@ -259,7 +268,15 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>
+                    Create a function with 2 parameters: customerArray, and ID
+                  </li>
+                  <li>Iterate through the customer array</li>
+                  <li>Check if the given ID equals to the ID in the array</li>
+                  <li>If there is no match, return error message</li>
+                  <li>Otherwise, return true/false based on marketing</li>
+                </ul>
               </AccordionItem>
               <AccordionItem
                 header={
@@ -268,7 +285,15 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <p className="accordion__description">
+                  Please see the live demo.
+                </p>
+                <CopyBlock
+                  text={`node 04-question/04-question.js`}
+                  language={"terminal"}
+                  showLineNumbers={true}
+                  wrapLines
+                />
               </AccordionItem>
               <AccordionItem
                 header={
@@ -277,39 +302,51 @@ mainContent.style.width = "100%";`;
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>the `find` method may not suit large arrays</li>
+                </ul>
               </AccordionItem>
               <AccordionItem
                 header={
                   <div className="accordion">
-                    <p className="accordion__title">Improvements</p>
+                    <p className="accordion__title">Improvements/Alternative</p>
                   </div>
                 }
               >
-                <p className="accordion__description">stuff here</p>
+                <ul>
+                  <li>Parameter checks to assist team</li>
+                  <li>
+                    Provide descriptive error messages to assist in debugging
+                  </li>
+                </ul>
               </AccordionItem>
             </Accordion>
           </div>
         </section>
         <section className="section end" id="end">
           <div className="section__container">
-
-        {  "///////////////            Hello there!"}
-        {" /////////////////////         We are looking for the very best software engineers"}
-      {" ///////////            //       for our offices in Hatfield, UK and Krakow, Poland."}
-     {"///////////     /////     ///     "}
-    {"///////////    ///////     ///     If you fit the bill then check us out at www.ocadotechnology.com"}
-   {"////////////    ///////////////      "}
-   {"////////////    /////////////////    "}
-  {"/////////////    ////////////// //    "}
-   {"//////////////    ////////// ////    "}
-   {"////////////////           /////     "}
-   {"////////////////////////////////     "}
-    {"//////////////////////////////      "}
-     {"////////////////////////////       "}
-       {"////////////////////////         "}
-         {"////////////////////           "}
-              {"///////////              "}
+            {"///////////////            Hello there!"}
+            {
+              " /////////////////////         We are looking for the very best software engineers"
+            }
+            {
+              " ///////////            //       for our offices in Hatfield, UK and Krakow, Poland."
+            }
+            {"///////////     /////     ///     "}
+            {
+              "///////////    ///////     ///     If you fit the bill then check us out at www.ocadotechnology.com"
+            }
+            {"////////////    ///////////////      "}
+            {"////////////    /////////////////    "}
+            {"/////////////    ////////////// //    "}
+            {"//////////////    ////////// ////    "}
+            {"////////////////           /////     "}
+            {"////////////////////////////////     "}
+            {"//////////////////////////////      "}
+            {"////////////////////////////       "}
+            {"////////////////////////         "}
+            {"////////////////////           "}
+            {"///////////              "}
           </div>
         </section>
       </main>
