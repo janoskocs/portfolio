@@ -258,7 +258,10 @@ mainContent.style.width = "100%";`;
           <div className="section__container">
             <h2 className="section__title">Question 4</h2>
             <h3 className="section__sub-title">Customer marketing</h3>
-            <p className="section__description">Statement</p>
+            <p className="section__description">
+              Create a function that returns the email marketing status of a
+              customer
+            </p>
 
             <Accordion transition transitionTimeout={250}>
               <AccordionItem
