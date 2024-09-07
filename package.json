@@ -9,7 +9,14 @@
     "lint": "eslint . --ext .ts,.tsx",
     "lint:vite": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "husky install",
+    "lint-staged": {
+      "*.{js,css,ts,tsx,jsx}": [
+        "prettier --write",
+        "eslint --fix"
+      ]
+    }
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",
@@ -36,5 +43,9 @@
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vitest": "^2.0.5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --cache --fix"
   }
 }
+
