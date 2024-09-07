@@ -6,18 +6,25 @@
     "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
-    "eslint-config-prettier",
+    "eslint-config-prettier"
   ],
   "settings": {
     "react": {
-      "version": "detect",
+      "version": "detect"
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-      },
-    },
+        "paths": [
+          "src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
   },
   "rules": {
     "no-unused-vars": [
@@ -26,9 +33,17 @@
         "vars": "all",
         "args": "after-used",
         "ignoreRestSiblings": true,
-        "argsIgnorePattern": "^_",
-      },
+        "argsIgnorePattern": "^_"
+      }
     ],
     "react/react-in-jsx-scope": "off",
-  },
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ]
+  }
 }
