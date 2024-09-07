@@ -13,16 +13,11 @@
       "version": "detect"
     },
     "import/resolver": {
-      "alias": {
-        "map": [
-          [
-            "@",
-            "./src"
-          ],
-          [
-            "@components",
-            "./src/components"
-          ]
+      "node": {
+        "paths": [
+          "src",
+          "@",
+          "@components"
         ],
         "extensions": [
           ".js",
