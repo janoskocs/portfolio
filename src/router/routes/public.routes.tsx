@@ -11,3 +11,4 @@ const publicRoutes: routerType[] = [
 ];
 
 export default publicRoutes;
+

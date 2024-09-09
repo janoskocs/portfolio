@@ -1,0 +1,5 @@
+.taskbar {
+  background-color: var(--system-ui-primary);
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #4e4e4e;
+}
