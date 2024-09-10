@@ -1,0 +1,7 @@
+.system-tray {
+  box-shadow:
+    inset -1px -1px #dfdfdf,
+    inset 1px 1px gray;
+  padding: 0.5rem;
+  display: inline-block;
+}

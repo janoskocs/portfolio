@@ -1,4 +1,10 @@
+import Clock from "../Clock";
+import styles from "./SystemTray.module.css";
 const SystemTray = () => {
-  return <div>System tray</div>;
+  return (
+    <section className={styles["system-tray"]}>
+      <Clock />
+    </section>
+  );
 };
 export default SystemTray;
