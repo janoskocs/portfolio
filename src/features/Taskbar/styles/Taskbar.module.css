@@ -2,4 +2,12 @@
   background-color: var(--system-ui-primary);
   border-top: 1px solid #f4f4f4;
   border-bottom: 1px solid #4e4e4e;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.2rem;
+}
+
+/* Push system tray to the right */
+.taskbar > :last-child {
+  margin-left: auto;
 }
