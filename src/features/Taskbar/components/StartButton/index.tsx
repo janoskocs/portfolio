@@ -1,6 +1,6 @@
 import styles from "./StartButton.module.css";
 
-const index = () => {
+const StartButton = () => {
   return (
     <div className={styles["start-button-container"]}>
       <button className={styles["start-button"]}>
@@ -10,4 +10,4 @@ const index = () => {
     </div>
   );
 };
-export default index;
+export default StartButton;

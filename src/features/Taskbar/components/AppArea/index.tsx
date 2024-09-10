@@ -1,20 +1,12 @@
 import styles from "./AppArea.module.css";
-const index = () => {
+import AppAreaButton from "../AppAreaButton";
+const AppArea = () => {
   return (
     <section className={styles["app-area"]}>
-      <button className={styles.app}>
-        <img src="/images/icons/about-me.png" alt="computer" className={styles.icon} />
-        About Me
-      </button>
-      <button className={styles.app}>
-        <img src="/images/icons/contact-me.png" alt="computer" className={styles.icon} />
-        Contact Me
-      </button>
-      <button className={styles.app}>
-        <img src="/images/icons/projects.png" alt="computer" className={styles.icon} />
-        Projects
-      </button>
+      <AppAreaButton title="About Me" icon="about-me.png" iconAlt="computer" />
+      <AppAreaButton title="Contact Me" icon="contact-me.png" iconAlt="post" />
+      <AppAreaButton title="Projects" icon="projects.png" iconAlt="open folder" />
     </section>
   );
 };
-export default index;
+export default AppArea;

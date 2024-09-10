@@ -1,4 +1,4 @@
-const index = () => {
+const SystemTray = () => {
   return <div>System tray</div>;
 };
-export default index;
+export default SystemTray;
