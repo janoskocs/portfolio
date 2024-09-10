@@ -1,3 +1,4 @@
 .desktop {
   background-color: var(--desktop-background);
+  height: 100vh;
 }

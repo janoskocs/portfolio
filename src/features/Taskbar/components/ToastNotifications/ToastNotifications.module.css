@@ -33,3 +33,18 @@
   margin-left: -0.875em;
   margin-bottom: -1.75em;
 }
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+}
+
+.close {
+  all: unset;
+  cursor: pointer;
+}
