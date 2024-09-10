@@ -5,6 +5,9 @@
   display: flex;
   justify-content: flex-start;
   padding: 0.2rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Push system tray to the right */

@@ -11,8 +11,8 @@
 
 .notification {
   position: absolute;
-  background: #d6ed0d;
-  border-radius: 0.4rem;
+  background: var(--system-ui-notification-bg);
+  border-radius: 4px;
   bottom: 5rem;
   right: -5rem;
   width: 15rem;
@@ -27,7 +27,7 @@
   width: 0;
   height: 0;
   border: 1.75em solid transparent;
-  border-top-color: #d6ed0d;
+  border-top-color: var(--system-ui-notification-bg);
   border-bottom: 0;
   border-right: 0;
   margin-left: -0.875em;
