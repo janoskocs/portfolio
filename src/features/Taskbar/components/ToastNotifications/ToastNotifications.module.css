@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon {
+  width: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.notification {
+  position: absolute;
+  background: #d6ed0d;
+  border-radius: 0.4rem;
+  bottom: 5rem;
+  right: -5rem;
+  width: 15rem;
+  padding: 1rem;
+}
+
+.notification:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 1.75em solid transparent;
+  border-top-color: #d6ed0d;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -0.875em;
+  margin-bottom: -1.75em;
+}
