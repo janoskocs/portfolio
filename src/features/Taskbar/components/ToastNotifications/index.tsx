@@ -1,12 +1,23 @@
+import { useState } from "react";
 import styles from "./ToastNotifications.module.css";
 
 const ToastNotifications = () => {
+  const [isActive, setIsActive] = useState<boolean>(true);
+
+  const notificationClassName = `${styles.notification} ${isActive && styles.active}`;
+
+  const handleClose = () => {
+    setIsActive(false);
+  };
+
   return (
-    <div className={styles["container"]}>
-      <div className={styles["notification"]}>
+    <div className={styles.container}>
+      <div className={notificationClassName}>
         <div className={styles["title-container"]}>
           <h4 className={styles.title}>Title</h4>
-          <button className={styles.close}>x</button>
+          <button className={styles.close} onClick={handleClose}>
+            x
+          </button>
         </div>
 
         <p>Content</p>
