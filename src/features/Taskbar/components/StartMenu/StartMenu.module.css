@@ -1,17 +1,45 @@
 .start {
   position: absolute;
-  bottom: 3rem;
+  bottom: 3.6rem;
   left: 0;
-  background-color: red;
-  color: white;
+  background-color: var(--system-ui-primary);
   width: 200px;
   transform: translateY(100%);
   transition: transform 0.3s ease-out;
   opacity: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  box-shadow: inset 1px 1px #4e4e4e;
+
+  display: flex;
 }
 
 .open {
   transform: translateY(0);
   opacity: 1;
+}
+
+.logo {
+  width: 4rem;
+}
+
+.side {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: linear-gradient(360deg, #0000ff, #000080);
+  width: 5rem;
+  margin-bottom: 1px;
+}
+
+.title {
+  rotate: 180deg;
+  writing-mode: vertical-lr;
+  color: #fff;
+  padding-bottom: 1rem;
 }
 
