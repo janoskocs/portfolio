@@ -1,5 +1,17 @@
 .start {
-  background-color: #f0f0f0;
   position: absolute;
   bottom: 3rem;
+  left: 0;
+  background-color: red;
+  color: white;
+  width: 200px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+  opacity: 0;
 }
+
+.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+

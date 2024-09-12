@@ -1,15 +1,13 @@
+import React from "react";
 import styles from "./StartMenu.module.css";
 
 type StartMenuProps = {
   isOpen: boolean;
 };
-const StartMenu = ({ isOpen }: StartMenuProps) => {
-  if (!isOpen) {
-    return null;
-  }
 
+const StartMenu = ({ isOpen }: StartMenuProps) => {
   return (
-    <nav className={styles.start}>
+    <nav className={`${styles.start} ${isOpen ? styles.open : ""}`}>
       <ul>
         <li>Program 1</li>
         <li>Program 2</li>
@@ -18,4 +16,6 @@ const StartMenu = ({ isOpen }: StartMenuProps) => {
     </nav>
   );
 };
+
 export default StartMenu;
+
