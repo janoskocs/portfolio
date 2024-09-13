@@ -12,7 +12,7 @@ const StartMenu = ({ isOpen }: StartMenuProps) => {
         <h2 className={styles.title}>János Kócs</h2>
       </aside>
       <ul className={styles.list}>
-        <li>Program 1</li>
+        <li className={styles["list-item"]}>Program 1</li>
         <li>Program 2</li>
         <li>Program 3</li>
       </ul>

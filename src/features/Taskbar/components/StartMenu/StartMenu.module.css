@@ -43,3 +43,6 @@
   padding-bottom: 1rem;
 }
 
+.list-item:hover {
+  background-color: blue;
+}
