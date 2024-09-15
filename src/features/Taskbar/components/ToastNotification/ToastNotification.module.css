@@ -1,0 +1,45 @@
+.notification {
+  position: absolute;
+  background: var(--system-ui-notification-bg);
+  border-radius: 4px;
+  bottom: 5rem;
+  right: -5rem;
+  width: 15rem;
+  padding: 1rem;
+  margin-right: 2rem;
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+.active {
+  opacity: 1;
+}
+
+.notification:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 1.75em solid transparent;
+  border-top-color: var(--system-ui-notification-bg);
+  border-bottom: 0;
+  border-right: 0;
+  margin-bottom: -1.75em;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+}
+
+.close {
+  all: unset;
+  cursor: pointer;
+}

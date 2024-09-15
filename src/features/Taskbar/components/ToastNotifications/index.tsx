@@ -1,33 +1,34 @@
 import { useState } from "react";
+import ToastNotification from "../ToastNotification";
 import styles from "./ToastNotifications.module.css";
 
+type Notification = {
+  id: string;
+  icon: string;
+};
+
 const ToastNotifications = () => {
-  const [isActive, setIsActive] = useState<boolean>(true);
-
-  const notificationClassName = `${styles.notification} ${isActive && styles.active}`;
-
-  const handleClose = () => {
-    setIsActive(false);
-  };
+  const [notifications] = useState<Notification[]>([
+    {
+      id: "1",
+      icon: "about-me.png",
+    },
+  ]);
 
   return (
     <div className={styles.container}>
-      <div className={notificationClassName}>
-        <div className={styles["title-container"]}>
-          <h4 className={styles.title}>Title</h4>
-          <button className={styles.close} onClick={handleClose}>
-            x
-          </button>
-        </div>
-
-        <p>Content</p>
-        <div className={styles["notification-actions"]}>
-          <button>Accept</button>
-          <button>Decline</button>
-        </div>
-      </div>
-      <img src="/images/icons/about-me.png" alt="Notifications" className={styles.icon} />
+      {notifications.map((notification) => {
+        return (
+          <div key={notification.id}>
+            <ToastNotification />
+            <button className={styles.button}>
+              <img src={`/images/icons/${notification.icon}`} alt="Notifications" className={styles.icon} />
+            </button>
+          </div>
+        );
+      })}
     </div>
   );
 };
 export default ToastNotifications;
+

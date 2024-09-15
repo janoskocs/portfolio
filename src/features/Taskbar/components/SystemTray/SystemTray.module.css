@@ -1,7 +1,7 @@
 .system-tray {
   box-shadow:
-    inset -1px -1px #dfdfdf,
-    inset 1px 1px gray;
+    inset -1px -1px var(--system-ui-shadow-light-accent),
+    inset 1px 1px var(--system-ui-shadow-dark-accent);
   padding: 0.5rem;
   display: flex;
   align-items: center;

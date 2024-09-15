@@ -12,6 +12,7 @@ const Taskbar = () => {
   const handleStartMenu = () => {
     setIsStartMenuOpen((prev) => !prev);
   };
+
   return (
     <>
       <StartMenu isOpen={isStartMenuOpen} />
