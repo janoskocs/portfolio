@@ -13,7 +13,7 @@ const Clock = () => {
     };
   }, []);
 
-  return <section>{time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</section>;
+  return <time>{time.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</time>;
 };
 
 export default Clock;
