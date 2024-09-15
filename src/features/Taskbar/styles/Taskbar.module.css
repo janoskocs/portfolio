@@ -10,7 +10,6 @@
   width: 100%;
 }
 
-/* Push system tray to the right */
 .taskbar > :last-child {
   margin-left: auto;
 }

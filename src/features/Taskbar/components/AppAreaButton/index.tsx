@@ -7,7 +7,7 @@ type AppAreaButtonProps = {
 
 const AppAreaButton = ({ title, icon, iconAlt }: AppAreaButtonProps) => {
   return (
-    <button className={styles.app}>
+    <button className={styles["app-button"]}>
       <img src={`/images/icons/${icon}`} alt={iconAlt} className={styles.icon} />
       {title}
     </button>
