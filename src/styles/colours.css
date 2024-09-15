@@ -2,11 +2,11 @@
   --system-ui-primary: #c0c0c0;
   --system-ui-notification-bg: #ece9d8;
 
-  --system-ui-shadow-left-top: #000;
-  --system-ui-shadow-right-bottom: #fff;
-  --system-ui-shadow-left-top-accent: #dfdfdf;
-  --system-ui-shadow-right-bottom-accent: gray;
-  --system-ui-active-app-bg: #f0f8ff;
+  --system-ui-shadow-dark: #000;
+  --system-ui-shadow-light: #fff;
+  --system-ui-shadow-light-accent: #dfdfdf;
+  --system-ui-shadow-dark-accent: gray;
+  --system-ui-button-focus: #f0f8ff;
 
   --desktop-background: #008080;
   --dark: #000;

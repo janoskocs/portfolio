@@ -3,10 +3,10 @@
   background-color: var(--system-ui-primary);
   cursor: pointer;
   box-shadow:
-    inset -1px -1px var(--system-ui-shadow-left-top),
-    inset 1px 1px var(--system-ui-shadow-right-bottom),
-    inset -2px -2px var(--system-ui-shadow-right-bottom-accent),
-    inset 2px 2px var(--system-ui-shadow-left-top-accent);
+    inset -1px -1px var(--system-ui-shadow-dark),
+    inset 1px 1px var(--system-ui-shadow-light),
+    inset -2px -2px var(--system-ui-shadow-dark-accent),
+    inset 2px 2px var(--system-ui-shadow-light-accent);
   text-shadow: 0 0 var(--dark);
   display: flex;
   flex-direction: row;
@@ -23,12 +23,12 @@
 }
 .app-button:active {
   box-shadow:
-    inset -1px -1px var(--system-ui-shadow-right-bottom),
-    inset 1px 1px var(--system-ui-shadow-left-top),
-    inset -2px -2px var(--system-ui-shadow-right-bottom-accent),
-    inset 2px 2px var(--system-ui-shadow-left-top-accent);
+    inset -1px -1px var(--system-ui-shadow-light),
+    inset 1px 1px var(--system-ui-shadow-dark),
+    inset -2px -2px var(--system-ui-shadow-dark-accent),
+    inset 2px 2px var(--system-ui-shadow-light-accent);
   font-weight: 700;
-  background-color: var(--system-ui-active-app-bg);
+  background-color: var(--system-ui-button-focus);
 }
 
 .icon {

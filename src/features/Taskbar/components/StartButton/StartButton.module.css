@@ -1,13 +1,13 @@
 .start-button {
   all: unset;
-  background-color: silver;
+  background-color: var(--system-ui-primary);
   cursor: pointer;
   box-shadow:
-    inset -1px -1px #000,
-    inset 1px 1px #fff,
-    inset -2px -2px gray,
-    inset 2px 2px #dfdfdf;
-  text-shadow: 0 0 #222;
+    inset -1px -1px var(--system-ui-shadow-dark),
+    inset 1px 1px var(--system-ui-shadow-light),
+    inset -2px -2px var(--system-ui-shadow-dark-accent),
+    inset 2px 2px var(--system-ui-shadow-light-accent);
+  text-shadow: 0 0 var(--dark);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,14 +16,14 @@
 
 .start-button:active {
   box-shadow:
-    inset -1px -1px #fff,
-    inset 1px 1px #000,
-    inset -2px -2px #dfdfdf,
-    inset 2px 2px #dfdfdf;
+    inset -1px -1px var(--system-ui-shadow-light),
+    inset 1px 1px var(--system-ui-shadow-dark),
+    inset -2px -2px var(--system-ui-shadow-dark-accent),
+    inset 2px 2px var(--system-ui-shadow-light-accent);
 }
 
 .start-button:focus {
-  outline: 1px dotted #000;
+  outline: 1px dotted var(--dark);
   outline-offset: -4px;
 }
 .start-icon {
