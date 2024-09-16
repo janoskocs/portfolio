@@ -5,12 +5,11 @@ type StartButtonProps = {
 };
 const StartButton = ({ onClick }: StartButtonProps) => {
   return (
-    <div className={styles["start-button-container"]}>
-      <button className={styles["start-button"]} onClick={onClick}>
-        <img src="/images/logos/logocolour.png" alt="Start" className={styles["start-icon"]} />
-        Start
-      </button>
-    </div>
+    <button className={styles["start-button"]} onClick={onClick}>
+      <img src="/images/logos/logocolour.png" alt="Start" className={styles["start-icon"]} />
+      Start
+    </button>
   );
 };
 export default StartButton;
+

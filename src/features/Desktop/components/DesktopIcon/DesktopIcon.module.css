@@ -8,14 +8,6 @@
   flex-wrap: nowrap;
   color: var(--theme-text-light);
   text-shadow: 1px 1px var(--dark);
-  /* background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ccc;
-  height: 100px; /* Same as grid-template-rows */
-  /* width: 100px; 
-  text-align: center;  */
 }
 
 .icon:hover {

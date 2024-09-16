@@ -16,12 +16,12 @@ const Taskbar = () => {
   return (
     <>
       <StartMenu isOpen={isStartMenuOpen} />
-      <section className={styles.taskbar}>
+      <footer className={styles.taskbar}>
         <StartButton onClick={handleStartMenu} />
         <Divider orientation="vertical" />
         <AppArea />
         <SystemTray />
-      </section>
+      </footer>
     </>
   );
 };
