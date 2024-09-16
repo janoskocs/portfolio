@@ -1,9 +1,13 @@
 import DesktopIcons from "./components/DesktopIcons";
 import styles from "./styles/Desktop.module.css";
-const Desktop = () => {
+
+type DesktopProps = {
+  setIsStartMenuOpen: (_isStartMenuOpen: boolean) => void;
+};
+const Desktop = ({ setIsStartMenuOpen }: DesktopProps) => {
   return (
     <main className={styles.desktop}>
-      <DesktopIcons />
+      <DesktopIcons setIsStartMenuOpen={setIsStartMenuOpen} />
     </main>
   );
 };
