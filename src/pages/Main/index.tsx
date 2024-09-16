@@ -1,9 +1,10 @@
 import Taskbar from "@/features/Taskbar";
 import styles from "./Main.module.css";
+import Desktop from "@/features/Desktop";
 const index = () => {
   return (
     <div className={styles.desktop}>
-      {/* <h1>Hello MAIN</h1> */}
+      <Desktop />
       <Taskbar />
     </div>
   );

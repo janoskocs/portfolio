@@ -1,0 +1,9 @@
+.desktop-icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(auto-fill, 10rem);
+  grid-auto-columns: 10rem;
+  gap: 1rem;
+  height: 92vh;
+  padding: 1rem;
+}

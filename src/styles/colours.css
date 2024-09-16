@@ -11,4 +11,9 @@
   --desktop-background: #008080;
   --dark: #000;
   --light: #fff;
+
+  --theme-primary: #000080;
+  --theme-secondary: #1084d0;
+  --theme-text-light: #fff;
+  --theme-text-dark: #000;
 }
