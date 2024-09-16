@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Taskbar from "@/features/Taskbar";
-import styles from "./Main.module.css";
 import Desktop from "@/features/Desktop";
+import styles from "./Main.module.css";
 const Main = () => {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState<boolean>(false);
 

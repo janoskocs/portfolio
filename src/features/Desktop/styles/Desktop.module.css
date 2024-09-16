@@ -1,3 +1,12 @@
 .desktop {
   height: 100%;
 }
+
+.window {
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  cursor: pointer;
+}
