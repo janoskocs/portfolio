@@ -3,7 +3,7 @@
 }
 
 .window {
-  background-color: red;
+  background-color: var(--system-ui-primary);
   position: absolute;
   top: 0;
   left: 0;
