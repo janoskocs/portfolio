@@ -9,6 +9,13 @@
   left: 0;
   width: 80%;
   cursor: pointer;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #4e4e4e;
+  box-shadow:
+    inset -1px -1px #000,
+    inset 1px 1px #dfdfdf,
+    inset -2px -2px gray,
+    inset 2px 2px #fff;
 }
 
 .titlebar {
