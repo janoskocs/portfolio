@@ -28,3 +28,47 @@
   margin: 2px;
   color: #fff;
 }
+
+.title-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.window-control {
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #4e4e4e;
+  box-shadow:
+    inset -1px -1px #000,
+    inset 1px 1px #dfdfdf,
+    inset -2px -2px gray,
+    inset 2px 2px #fff;
+  all: unset;
+  background-color: silver;
+  cursor: pointer;
+  box-shadow:
+    inset -1px -1px #000,
+    inset 1px 1px #fff,
+    inset -2px -2px gray,
+    inset 2px 2px #dfdfdf;
+  text-shadow: 0 0 #222;
+  padding: 0.1rem 0.5rem;
+  color: #000;
+  font-weight: 700;
+
+  /* font-size: 1.6rem; */
+}
+
+.minimised {
+  transition: 0.6s all;
+  transform: translate(-500px, 500px) scale(0);
+}

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useRef } from "react";
@@ -8,6 +9,7 @@ type DesktopProps = {
   setIsStartMenuOpen: (_isStartMenuOpen: boolean) => void;
 };
 const Desktop = ({ setIsStartMenuOpen }: DesktopProps) => {
+  const minimisedClass = styles.minimised;
   const elemRef = useRef<HTMLDivElement | null>(null);
   const dragProps = useRef<
     undefined | { dragStartLeft: number; dragStartTop: number; dragStartX: number; dragStartY: number }
@@ -38,12 +40,43 @@ const Desktop = ({ setIsStartMenuOpen }: DesktopProps) => {
     window.removeEventListener("mousemove", startDragging, false);
     window.removeEventListener("mouseup", stopDragging, false);
   };
+
+  const minimise = (windowName: string) => {
+    console.log("minimise", windowName);
+    (elemRef.current as HTMLDivElement).classList.add(minimisedClass);
+  };
+
+  const closeWindow = (windowName: string) => {
+    console.log(windowName);
+  };
+
   return (
     <main className={styles.desktop}>
       <DesktopIcons setIsStartMenuOpen={setIsStartMenuOpen} />
       <article ref={elemRef} className={styles.window}>
         <div className={styles.titlebar} onMouseDown={initialiseDrag}>
-          title X
+          <div className={styles["title-container"]}>
+            <img className={styles.icon} src="/images/icons/about-me.png" alt="icon" />
+            <h2 className={styles.title}>Title</h2>
+          </div>
+          <div className={styles["window-controls"]}>
+            <button
+              onClick={() => {
+                minimise("window");
+              }}
+              className={styles["window-control"]}
+            >
+              _
+            </button>
+            <button
+              onClick={() => {
+                closeWindow("window");
+              }}
+              className={styles["window-control"]}
+            >
+              +
+            </button>
+          </div>
         </div>
         <div> links</div>
         <div>content</div>
@@ -53,3 +86,4 @@ const Desktop = ({ setIsStartMenuOpen }: DesktopProps) => {
   );
 };
 export default Desktop;
+
