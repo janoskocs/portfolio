@@ -10,3 +10,14 @@
   width: 80%;
   cursor: pointer;
 }
+
+.titlebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  padding: 3px 2px 3px 3px;
+  margin: 2px;
+  color: #fff;
+}

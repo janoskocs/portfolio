@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { useRef } from "react";
 import DesktopIcons from "./components/DesktopIcons";
@@ -40,8 +41,10 @@ const Desktop = ({ setIsStartMenuOpen }: DesktopProps) => {
   return (
     <main className={styles.desktop}>
       <DesktopIcons setIsStartMenuOpen={setIsStartMenuOpen} />
-      <article onMouseDown={initialiseDrag} ref={elemRef} className={styles.window}>
-        <div> title X</div>
+      <article ref={elemRef} className={styles.window}>
+        <div className={styles.titlebar} onMouseDown={initialiseDrag}>
+          title X
+        </div>
         <div> links</div>
         <div>content</div>
         <div>footer</div>
