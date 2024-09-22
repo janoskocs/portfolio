@@ -3,7 +3,6 @@
   bottom: 3.6rem;
   left: 0;
   background-color: var(--system-ui-primary);
-  width: 200px;
   transform: translateY(100%);
   transition: transform 0.3s ease-out;
   opacity: 0;
@@ -23,6 +22,7 @@
 
 .logo {
   width: 4rem;
+  margin-top: 1rem;
 }
 
 .side {
@@ -43,6 +43,36 @@
   padding-bottom: 1rem;
 }
 
-.list-item:hover {
-  background-color: blue;
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  flex-wrap: nowrap;
 }
+.list-item {
+  margin: 0.1rem;
+  padding-right: 0.5rem;
+}
+
+.button {
+  all: unset;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-right: 0.5rem;
+}
+.button:hover {
+  background-color: navy;
+  color: #fff;
+}
+
+.icon {
+  width: 4rem;
+  margin-right: 1rem;
+}
+
