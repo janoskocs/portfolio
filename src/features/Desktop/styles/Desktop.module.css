@@ -70,5 +70,6 @@
 
 .minimised {
   transition: 0.6s all;
-  transform: translate(-500px, 500px) scale(0);
+  /* transform: translate(-30rem, 50rem) scale(0); */
 }
+

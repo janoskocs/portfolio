@@ -43,7 +43,9 @@ const Desktop = ({ setIsStartMenuOpen }: DesktopProps) => {
 
   const minimise = (windowName: string) => {
     console.log("minimise", windowName);
+    (elemRef.current as HTMLDivElement).style.removeProperty("transform");
     (elemRef.current as HTMLDivElement).classList.add(minimisedClass);
+    (elemRef.current as HTMLDivElement).style.transform = "translate(-30rem, 50rem) scale(0)";
   };
 
   const closeWindow = (windowName: string) => {
