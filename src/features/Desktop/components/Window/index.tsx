@@ -3,7 +3,7 @@ import { useRef } from "react";
 import styles from "./Window.module.css";
 
 type WindowProps = {
-  children: React.ReactNode;
+  children: React.ReactNode | null;
 };
 const Window = ({ children }: WindowProps) => {
   const minimisedClass = styles.minimised;
@@ -74,7 +74,7 @@ const Window = ({ children }: WindowProps) => {
           </button>
         </div>
       </div>
-      {children}
+      {children && children}
     </article>
   );
 };
