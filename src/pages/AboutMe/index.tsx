@@ -1,4 +1,6 @@
+import Window from "@/features/Desktop/components/Window";
+
 const AboutMe = () => {
-  return <div>AboutMe</div>;
+  return <Window>AboutMe</Window>;
 };
 export default AboutMe;
