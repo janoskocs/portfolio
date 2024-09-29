@@ -1,11 +1,20 @@
 import Window from "@/layout/Window";
-import { AppPageType } from "@/types/pageTypes";
+import { WindowType } from "../Main/types";
 
-const AboutMe = ({ position, zIndex }: AppPageType) => {
+const AboutMe = ({ id, position, focus, minimised, appName, setWindows }: WindowType) => {
+  console.log(position);
   return (
-    <Window position={position} zIndex={zIndex}>
+    <Window
+      id={id}
+      appName={appName}
+      position={{ x: position.x, y: position.y }}
+      focus={focus}
+      minimised={minimised}
+      setWindows={setWindows}
+    >
       AboutMe
     </Window>
   );
 };
 export default AboutMe;
+

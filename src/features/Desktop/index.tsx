@@ -1,23 +1,35 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import { Suspense } from "react";
-import Spinner from "@/components/Spinner";
 import DesktopIcons from "./components/DesktopIcons";
-import { Window } from "@/pages/Main/types";
+import { WindowType } from "@/pages/Main/types";
 import styles from "./styles/Desktop.module.css";
 import { openAppType } from "@/types/functionTypes";
+import { lazyImport } from "@/utils/lazyImport";
+import { Suspense } from "react";
+import Spinner from "@/components/Spinner";
 
 type DesktopProps = {
   openApp: openAppType;
-  windows: Window[];
+  setWindows: (_value: React.SetStateAction<WindowType[]>) => void;
+  windows: WindowType[];
 };
-const Desktop = ({ openApp, windows }: DesktopProps) => {
+const Desktop = ({ openApp, setWindows, windows }: DesktopProps) => {
   const ActiveWindows = windows?.map((window) => {
-    const WindowComponent = window.component as () => JSX.Element;
+    const AppComponent = lazyImport(`../pages/${window.appName}`);
+    // Modal for error loading component
+    if (!AppComponent) return;
     return (
       <Suspense key={window.id} fallback={<Spinner />}>
-        <WindowComponent />
+        <AppComponent
+          key={window.id}
+          id={window.id}
+          appName={window.appName}
+          position={window.position}
+          focus={window.focus}
+          minimised={window.minimised}
+          setWindows={setWindows}
+        />
       </Suspense>
     );
   });

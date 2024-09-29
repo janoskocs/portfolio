@@ -1,13 +1,14 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import { useRef, useState } from "react";
 import styles from "./Window.module.css";
 import useDrag from "@/hooks/useDrag";
+import { WindowType } from "@/pages/Main/types";
 type WindowProps = {
   children: React.ReactNode | null;
-  position: { x: number; y: number };
-  zIndex: number;
+  setWindows: (_value: React.SetStateAction<WindowType[]>) => void;
 };
-const Window = ({ children, position, zIndex }: WindowProps) => {
+const Window = ({ children, appName, position, focus, minimised, setWindows }: WindowProps & WindowType) => {
   const minimise = (windowName: string) => {
     const windowElement = windowRef.current as HTMLDivElement;
     windowElement.style.removeProperty("transform");
@@ -32,12 +33,13 @@ const Window = ({ children, position, zIndex }: WindowProps) => {
   };
 
   const closeWindow = (windowName: string) => {
-    console.log(windowName);
+    setWindows((prevWindows) => {
+      return prevWindows.filter((window) => window.appName !== windowName);
+    });
   };
 
-  const windowRef = useRef<HTMLDivElement>(null);
-
-  const [translate, setTranslate] = useState({ x: position.x, y: position.y });
+  const windowRef = useRef<HTMLElement>(null);
+  const [translate, setTranslate] = useState({ x: 0, y: 0 });
   const [scale, setScale] = useState(1);
 
   const handleDrag = (e: PointerEvent) => {
@@ -50,15 +52,15 @@ const Window = ({ children, position, zIndex }: WindowProps) => {
   useDrag(windowRef, [translate], {
     onDrag: handleDrag,
   });
-
+  console.log(minimised);
   return (
     <article
       ref={windowRef}
       className={styles.window}
       style={{
-        transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
+        transform: `translateX(${position.x}px) translateY(${position.y}px)`,
         scale: `${scale}`,
-        zIndex: zIndex,
+        zIndex: focus,
       }}
     >
       <div className={styles.titlebar}>
@@ -77,7 +79,7 @@ const Window = ({ children, position, zIndex }: WindowProps) => {
           </button>
           <button
             onClick={() => {
-              closeWindow("window");
+              closeWindow(appName);
             }}
             className={styles["window-control"]}
           >
@@ -90,3 +92,4 @@ const Window = ({ children, position, zIndex }: WindowProps) => {
   );
 };
 export default Window;
+

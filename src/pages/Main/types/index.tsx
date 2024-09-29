@@ -1,5 +1,9 @@
-export type Window = {
+export type WindowType = {
   id: number;
-  component: () => JSX.Element;
   appName: string;
+  minimised: boolean;
+  focus: number;
+  position: { x: number; y: number };
+  setWindows: (_value: React.SetStateAction<WindowType[]>) => void;
 };
+

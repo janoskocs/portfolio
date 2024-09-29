@@ -12,7 +12,7 @@ const DesktopIcon = ({ icon, iconAlt, title, openApp, path }: DesktopIconProps) 
     <button
       className={styles.icon}
       onClick={() => {
-        openApp(path, { x: 10, y: 10 }, 1);
+        openApp(path);
       }}
     >
       <img src={`/images/icons/${icon}`} alt={`${iconAlt}`} className={styles.iconImage} />

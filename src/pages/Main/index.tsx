@@ -1,26 +1,32 @@
 import { useState } from "react";
-import { lazyImport } from "@/utils/lazyImport";
-import { Window } from "@/pages/Main/types";
+import { WindowType } from "@/pages/Main/types";
 import Taskbar from "@/features/Taskbar";
 import Desktop from "@/features/Desktop";
 import styles from "./Main.module.css";
 
 const Main = () => {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState<boolean>(false);
-  const [windows, setWindows] = useState<Window[]>([]);
+  const [windows, setWindows] = useState<WindowType[]>([]);
 
-  const openApp = (appName: string, position: { x: number; y: number }, zIndex: number) => {
-    const AppComponent = lazyImport(`../pages/${appName}`);
+  const openApp = (appName: string) => {
     const isOpenAlready = windows.some((window) => window.appName === appName);
     if (isOpenAlready) return;
+    const focus = windows.length > 0 ? Math.max(...windows.map((window) => window.focus)) : 0;
+    const position =
+      windows.length > 0
+        ? { x: windows[windows.length - 1].position.x + 10, y: windows[windows.length - 1].position.y + 10 }
+        : { x: 10, y: 10 };
 
     setWindows((prevWindows) => {
       return [
         ...prevWindows,
         {
           id: Date.now(),
-          component: () => <AppComponent position={{ x: position.x, y: position.y }} zIndex={zIndex} />,
           appName: appName,
+          minimised: false,
+          focus: focus + 1,
+          position: position,
+          setWindows: setWindows,
         },
       ];
     });
@@ -28,7 +34,7 @@ const Main = () => {
 
   return (
     <div className={styles.desktop}>
-      <Desktop openApp={openApp} windows={windows} />
+      <Desktop openApp={openApp} windows={windows} setWindows={setWindows} />
       <Taskbar isStartMenuOpen={isStartMenuOpen} setIsStartMenuOpen={setIsStartMenuOpen} />
     </div>
   );
