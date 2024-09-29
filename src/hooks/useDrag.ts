@@ -13,6 +13,7 @@ const useDrag = (ref: RefObject<HTMLElement>, deps: unknown[] = [], options: Dra
   const [isDragging, setIsDragging] = useState(false);
 
   const handlePointerDown = (e: PointerEvent) => {
+    e.stopPropagation();
     setIsDragging(true);
     onPointerDown(e);
   };
@@ -23,6 +24,7 @@ const useDrag = (ref: RefObject<HTMLElement>, deps: unknown[] = [], options: Dra
   };
 
   const handlePointerMove = (e: PointerEvent) => {
+    e.stopPropagation();
     onPointerMove(e);
     if (isDragging) {
       onDrag(e);

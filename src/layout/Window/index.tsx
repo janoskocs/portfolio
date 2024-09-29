@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "./Window.module.css";
 import useDrag from "@/hooks/useDrag";
 import { WindowType } from "@/pages/Main/types";
@@ -13,8 +13,6 @@ const Window = ({ children, appName, position, focus, minimised, setWindows }: W
     const windowElement = windowRef.current as HTMLDivElement;
     windowElement.style.removeProperty("transform");
     windowElement.style.transition = "0.6s all";
-
-    setTranslate({ x: -300, y: 1000 });
 
     let opacity = 1;
     const opacityInterval = setInterval(() => {
@@ -38,8 +36,9 @@ const Window = ({ children, appName, position, focus, minimised, setWindows }: W
     });
   };
 
+  console.log(minimised);
   const windowRef = useRef<HTMLElement>(null);
-  const [translate, setTranslate] = useState({ x: 0, y: 0 });
+  const [translate, setTranslate] = useState({ x: position.x, y: position.y });
   const [scale, setScale] = useState(1);
 
   const handleDrag = (e: PointerEvent) => {
@@ -49,16 +48,43 @@ const Window = ({ children, appName, position, focus, minimised, setWindows }: W
     });
   };
 
+  const bringWindowToFront = () => {
+    setWindows((prevWindows) => {
+      const maxFocus = Math.max(...prevWindows.map((window) => window.focus));
+      return prevWindows.map((window) => {
+        if (window.appName === appName) {
+          return { ...window, focus: maxFocus + 1 };
+        }
+        return window;
+      });
+    });
+  };
+
+  useEffect(() => {
+    const element = windowRef.current;
+    const handleClick = () => {
+      bringWindowToFront();
+    };
+    if (element) {
+      element.addEventListener("pointerdown", handleClick);
+    }
+    return () => {
+      if (element) {
+        element.removeEventListener("pointerdown", handleClick);
+      }
+    };
+  }, []);
+
   useDrag(windowRef, [translate], {
     onDrag: handleDrag,
   });
-  console.log(minimised);
+
   return (
     <article
       ref={windowRef}
       className={styles.window}
       style={{
-        transform: `translateX(${position.x}px) translateY(${position.y}px)`,
+        transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
         scale: `${scale}`,
         zIndex: focus,
       }}

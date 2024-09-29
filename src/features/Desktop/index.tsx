@@ -22,6 +22,7 @@ const Desktop = ({ openApp, setWindows, windows }: DesktopProps) => {
     return (
       <Suspense key={window.id} fallback={<Spinner />}>
         <AppComponent
+          windows={windows}
           key={window.id}
           id={window.id}
           appName={window.appName}
