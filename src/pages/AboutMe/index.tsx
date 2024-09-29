@@ -1,6 +1,11 @@
-import Window from "@/features/Desktop/components/Window";
+import Window from "@/layout/Window";
+import { AppPageType } from "@/types/pageTypes";
 
-const AboutMe = () => {
-  return <Window>AboutMe</Window>;
+const AboutMe = ({ position, zIndex }: AppPageType) => {
+  return (
+    <Window position={position} zIndex={zIndex}>
+      AboutMe
+    </Window>
+  );
 };
 export default AboutMe;

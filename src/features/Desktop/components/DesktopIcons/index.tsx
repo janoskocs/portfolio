@@ -1,8 +1,9 @@
 import DesktopIcon from "../DesktopIcon";
 import styles from "./DesktopIcons.module.css";
+import { openAppType } from "@/types/functionTypes";
 
 type DesktopIconsProps = {
-  openApp: (_appName: string) => void;
+  openApp: openAppType;
 };
 const DesktopIcons = ({ openApp }: DesktopIconsProps) => {
   return (

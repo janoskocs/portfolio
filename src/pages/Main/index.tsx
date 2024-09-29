@@ -9,7 +9,7 @@ const Main = () => {
   const [isStartMenuOpen, setIsStartMenuOpen] = useState<boolean>(false);
   const [windows, setWindows] = useState<Window[]>([]);
 
-  const openApp = (appName: string) => {
+  const openApp = (appName: string, position: { x: number; y: number }, zIndex: number) => {
     const AppComponent = lazyImport(`../pages/${appName}`);
     const isOpenAlready = windows.some((window) => window.appName === appName);
     if (isOpenAlready) return;
@@ -19,7 +19,7 @@ const Main = () => {
         ...prevWindows,
         {
           id: Date.now(),
-          component: AppComponent,
+          component: () => <AppComponent position={{ x: position.x, y: position.y }} zIndex={zIndex} />,
           appName: appName,
         },
       ];

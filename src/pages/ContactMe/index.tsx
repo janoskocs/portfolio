@@ -1,6 +1,10 @@
-import Window from "@/features/Desktop/components/Window";
-
-const ContactMe = () => {
-  return <Window>CONTAT ME</Window>;
+import Window from "@/layout/Window";
+import { AppPageType } from "@/types/pageTypes";
+const ContactMe = ({ position, zIndex }: AppPageType) => {
+  return (
+    <Window position={position} zIndex={zIndex}>
+      CONTAT ME
+    </Window>
+  );
 };
 export default ContactMe;

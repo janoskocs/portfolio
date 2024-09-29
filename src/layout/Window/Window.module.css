@@ -15,6 +15,7 @@
     inset 1px 1px #dfdfdf,
     inset -2px -2px gray,
     inset 2px 2px #fff;
+  /* transition: 0.6s all; */
 }
 
 .titlebar {
@@ -63,11 +64,9 @@
   padding: 0.1rem 0.5rem;
   color: #000;
   font-weight: 700;
-
   /* font-size: 1.6rem; */
 }
 
 .minimised {
-  transition: 0.6s all;
-  /* transform: translate(-30rem, 50rem) scale(0); */
+  transition: 2s all;
 }
