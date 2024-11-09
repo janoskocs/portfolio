@@ -16,23 +16,25 @@ type DesktopProps = {
 };
 const Desktop = ({ openApp, setWindows, windows }: DesktopProps) => {
   const ActiveWindows = windows?.map((window) => {
-    const AppComponent = lazyImport(`../pages/${window.appName}`);
-    // Modal for error loading component
-    if (!AppComponent) return;
-    return (
-      <Suspense key={window.id} fallback={<Spinner />}>
-        <AppComponent
-          windows={windows}
-          key={window.id}
-          id={window.id}
-          appName={window.appName}
-          position={window.position}
-          focus={window.focus}
-          minimised={window.minimised}
-          setWindows={setWindows}
-        />
-      </Suspense>
-    );
+    if (windows[windows.length - 1].appName === window.appName) {
+      const AppComponent = lazyImport(`../pages/${window.appName}`);
+      // Modal for error loading component
+      if (!AppComponent) return;
+      return (
+        <Suspense key={window.id} fallback={<Spinner />}>
+          <AppComponent
+            windows={windows}
+            key={window.id}
+            id={window.id}
+            appName={window.appName}
+            position={window.position}
+            focus={window.focus}
+            minimised={window.minimised}
+            setWindows={setWindows}
+          />
+        </Suspense>
+      );
+    }
   });
 
   return (

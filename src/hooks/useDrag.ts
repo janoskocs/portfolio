@@ -7,7 +7,7 @@ interface DragOptions {
   onDrag?: (_e: PointerEvent) => void;
 }
 
-const useDrag = (ref: RefObject<HTMLElement>, deps: unknown[] = [], options: DragOptions = {}) => {
+const useDrag = (ref: RefObject<HTMLElement>, dependencies: unknown[] = [], options: DragOptions = {}) => {
   const { onPointerDown = () => {}, onPointerUp = () => {}, onPointerMove = () => {}, onDrag = () => {} } = options;
 
   const [isDragging, setIsDragging] = useState(false);
@@ -34,19 +34,19 @@ const useDrag = (ref: RefObject<HTMLElement>, deps: unknown[] = [], options: Dra
   useEffect(() => {
     const element = ref.current;
     if (element) {
-      element.addEventListener("pointerdown", handlePointerDown);
-      element.addEventListener("pointerup", handlePointerUp);
-      element.addEventListener("pointermove", handlePointerMove);
+      element.addEventListener("pointerdown", handlePointerDown, { once: true });
+      element.addEventListener("pointerup", handlePointerUp, { once: true });
+      element.addEventListener("pointermove", handlePointerMove, { once: true });
 
-      return () => {
-        element.removeEventListener("pointerdown", handlePointerDown);
-        element.removeEventListener("pointerup", handlePointerUp);
-        element.removeEventListener("pointermove", handlePointerMove);
-      };
+      // return () => {
+      //   element.removeEventListener("pointerdown", handlePointerDown);
+      //   element.removeEventListener("pointerup", handlePointerUp);
+      //   element.removeEventListener("pointermove", handlePointerMove);
+      // };
     }
 
-    return () => {};
-  }, [...deps, isDragging]);
+    // return () => {};
+  }, [...dependencies, isDragging]);
 
   return { isDragging };
 };

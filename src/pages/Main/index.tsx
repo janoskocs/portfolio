@@ -14,7 +14,7 @@ const Main = () => {
     const focus = windows.length > 0 ? Math.max(...windows.map((window) => window.focus)) : 0;
     const position =
       windows.length > 0
-        ? { x: windows[windows.length - 1].position.x + 10, y: windows[windows.length - 1].position.y + 10 }
+        ? { x: windows[windows.length - 1].position.x + 50, y: windows[windows.length - 1].position.y + 50 }
         : { x: 10, y: 10 };
 
     setWindows((prevWindows) => {

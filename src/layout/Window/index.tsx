@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import styles from "./Window.module.css";
 import useDrag from "@/hooks/useDrag";
 import { WindowType } from "@/pages/Main/types";
@@ -8,6 +8,7 @@ type WindowProps = {
   children: React.ReactNode | null;
   setWindows: (_value: React.SetStateAction<WindowType[]>) => void;
 };
+
 const Window = ({ children, appName, position, focus, minimised, setWindows }: WindowProps & WindowType) => {
   const minimise = (windowName: string) => {
     const windowElement = windowRef.current as HTMLDivElement;
@@ -36,17 +37,9 @@ const Window = ({ children, appName, position, focus, minimised, setWindows }: W
     });
   };
 
-  console.log(minimised);
-  const windowRef = useRef<HTMLElement>(null);
+  const windowRef = useRef<HTMLDivElement>(null);
   const [translate, setTranslate] = useState({ x: position.x, y: position.y });
   const [scale, setScale] = useState(1);
-
-  const handleDrag = (e: PointerEvent) => {
-    setTranslate({
-      x: translate.x + e.movementX,
-      y: translate.y + e.movementY,
-    });
-  };
 
   const bringWindowToFront = () => {
     setWindows((prevWindows) => {
@@ -59,29 +52,22 @@ const Window = ({ children, appName, position, focus, minimised, setWindows }: W
       });
     });
   };
-
-  useEffect(() => {
-    const element = windowRef.current;
-    const handleClick = () => {
-      bringWindowToFront();
-    };
-    if (element) {
-      element.addEventListener("pointerdown", handleClick);
-    }
-    return () => {
-      if (element) {
-        element.removeEventListener("pointerdown", handleClick);
-      }
-    };
-  }, []);
+  const handleDrag = (e: PointerEvent) => {
+    e.stopPropagation();
+    setTranslate({
+      x: translate.x + e.movementX,
+      y: translate.y + e.movementY,
+    });
+  };
 
   useDrag(windowRef, [translate], {
     onDrag: handleDrag,
+    onPointerDown: bringWindowToFront,
   });
 
+  console.log(minimised);
   return (
     <article
-      ref={windowRef}
       className={styles.window}
       style={{
         transform: `translateX(${translate.x}px) translateY(${translate.y}px)`,
@@ -89,7 +75,7 @@ const Window = ({ children, appName, position, focus, minimised, setWindows }: W
         zIndex: focus,
       }}
     >
-      <div className={styles.titlebar}>
+      <div ref={windowRef} className={styles.titlebar}>
         <div className={styles["title-container"]}>
           <img className={styles.icon} src="/images/icons/about-me.png" alt="icon" />
           <h2 className={styles.title}>Title</h2>
