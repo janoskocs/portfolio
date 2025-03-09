@@ -37,10 +37,10 @@ const ProjectLinks = ({
             />
             Learn more about the project
           </button>
-          <a href="#" className="links__live links__btn--disabled">
+          {/* <a href="#" className="links__live links__btn--disabled">
             <div className="links__live-pulse"></div>
             Live
-          </a>
+          </a> */}
         </fieldset>
       </section>
     );
@@ -107,7 +107,7 @@ const ProjectLinks = ({
         </div>
         <button
           className="links__live"
-          onClick={(e) => handleOpenWindow(selectedProjectDetails[0].name)}
+          onClick={() => handleOpenWindow(selectedProjectDetails[0].name)}
         >
           <img
             src={learnMoreBtnImage}
@@ -116,7 +116,7 @@ const ProjectLinks = ({
           />
           Learn more about {selectedProjectDetails[0].title}
         </button>
-        <a
+        {/* <a
           href={selectedProjectDetails[0].address}
           className="links__live"
           target="_blank"
@@ -124,7 +124,7 @@ const ProjectLinks = ({
         >
           <div className="links__live-pulse links__live-pulse--enabled"></div>
           Live
-        </a>
+        </a> */}
       </fieldset>
     </section>
   );
